@@ -7,7 +7,11 @@
     }
   </style>
 
-  <div {% render 'section-properties' %}>
+  <div {% render 'section-properties' %}
+          {% if section.settings.navigation_name != blank %}
+            data-navigation-name="{{ section.settings.navigation_name }}"
+          {% endif %}
+  >
     {%- assign text_position = section.settings.text_position -%}
     {%- assign blocks_before_divider = '' -%}
     {%- assign blocks_after_divider = '' -%}
@@ -140,6 +144,11 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "checkbox",
       "id": "full_width",

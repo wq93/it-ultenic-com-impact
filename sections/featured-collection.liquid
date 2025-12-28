@@ -32,7 +32,11 @@
   }
 </style>
 
-<div {% render 'section-properties' %}>
+<div {% render 'section-properties' %}
+        {% if section.settings.navigation_name != blank %}
+          data-navigation-name="{{ section.settings.navigation_name }}"
+        {% endif %}
+>
   <div class="section-stack">
     {%- assign link_url = section.settings.link_url | default: section.settings.collection.url -%}
     {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, heading_color: section.settings.heading_color, heading_gradient: section.settings.heading_gradient, content: section.settings.content, link_text: section.settings.link_text, link_url: link_url -%}
@@ -87,6 +91,11 @@
     "groups": ["header", "custom.overlay"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "collection",
       "id": "collection",

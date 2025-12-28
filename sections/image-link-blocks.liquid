@@ -41,7 +41,11 @@ LIQUID
 ------------------------------------------------------------------------------------------------------------------------
 {%- endcomment -%}
 
-<div {% render 'section-properties' %}>
+<div {% render 'section-properties' %}
+        {% if section.settings.navigation_name != blank %}
+          data-navigation-name="{{ section.settings.navigation_name }}"
+        {% endif %}
+>
   <div class="section-stack">
     {%- render 'section-header', subheading: section.settings.subheading, heading: section.settings.title, heading_color: section.settings.heading_color, heading_gradient: section.settings.heading_gradient, content: section.settings.content, link_text: section.settings.link_text, link_url: section.settings.link_url -%}
 
@@ -52,7 +56,7 @@ LIQUID
         {%- for block in section.blocks -%}
           {%- liquid
             assign loading_strategy = nil
-  
+
             if section.index > 3 or forloop.index > 3
               assign loading_strategy = 'lazy'
             endif
@@ -199,6 +203,11 @@ LIQUID
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "checkbox",
       "id": "full_width",

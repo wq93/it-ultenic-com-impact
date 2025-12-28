@@ -9,7 +9,11 @@
   }
 </style>
 
-<div {% render 'section-properties' %}>
+<div {% render 'section-properties' %}
+        {% if section.settings.navigation_name != blank %}
+          data-navigation-name="{{ section.settings.navigation_name }}"
+        {% endif %}
+>
   <div class="section-stack {% if text_position != 'center' %}section-stack--horizontal{% else %}section-stack--center{% endif %} {% if text_position == 'end' %}section-stack--reverse{% endif %}">
     {%- capture content -%}
       {%- if section.settings.subheading != blank -%}
@@ -144,6 +148,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "paragraph",
       "content": "Structured data is automatically created on FAQ page to improve SEO. [Learn more](https://developers.google.com/search/docs/advanced/structured-data/faqpage)"

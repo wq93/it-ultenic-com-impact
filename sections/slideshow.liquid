@@ -45,7 +45,11 @@ LIQUID
 
 {%- assign slideshow_id = 'slideshow-' | append: section.id -%}
 
-<x-slideshow class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
+<x-slideshow class="slideshow {% unless section.settings.full_width %}slideshow--boxed{% endunless %} {% if section.blocks.size > 1 %}slideshow--multiple-slides{% endif %}" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}
+        {% if section.settings.navigation_name != blank %}
+          data-navigation-name="{{ section.settings.navigation_name }}"
+        {% endif %}
+>
   {%- unless section.settings.full_width -%}
     <span class="slideshow__slide-background"></span>
   {%- endunless -%}
@@ -199,6 +203,11 @@ LIQUID
   },
   "max_blocks": 5,
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "checkbox",
       "id": "full_width",

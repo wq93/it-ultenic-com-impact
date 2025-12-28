@@ -1,0 +1,168 @@
+<navigation-tab class="media-with-text {% if section.settings.spacing == 'none' %}{% if section.settings.full_width %}full-bleed{% else %}rounded{% endif %}{% endif %}">
+  <style>
+    #shopify-section-{{ section.id }} {
+      {% if section.settings.remove_vertical_spacing %}--section-spacing-block: 0px;{% endif %}
+      {% if section.settings.remove_horizontal_spacing %}--section-spacing-inline: 0px;{% endif %}
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background-color: {{ section.settings.component_bg_color }};
+      color: {{ section.settings.component_text_color }};
+      display: none;
+    }
+    #shopify-section-{{ section.id }} .section{
+      width: 100%;
+      overflow: auto;
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+    }
+
+    #shopify-section-{{ section.id }} ul {
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    #shopify-section-{{ section.id }} ul::-webkit-scrollbar {
+      display: none;
+    }
+
+    #shopify-section-{{ section.id }} .common-tabbar-item {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      padding: 8px 30px;
+      width: fit-content;
+      border-radius: 50px;
+      flex: none;
+      margin: 0;
+      border: 0;
+      cursor: pointer;
+      background: {{ section.settings.button_bg_color }};
+      color: {{ section.settings.button_text_color }};
+    }
+    #shopify-section-{{ section.id }} .common-tabbar-item.active {
+      background: {{ section.settings.active_button_bg_color }};
+      color: {{ section.settings.active_button_text_color }};
+    }
+  </style>
+
+  <div {% render 'section-properties' %}>
+    <ul class="navigation-tab-ul"></ul>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const headerEle = document.querySelector('.header__wrapper');
+      const sectionEle =  document.querySelector('#shopify-section-{{ section.id }}');
+      const navigationNames = document.querySelectorAll(
+              'section[id^="shopify-section-template"] [data-navigation-name]'
+      );
+      const targetEle = sectionEle.querySelector('.navigation-tab-ul');
+
+      if (!targetEle || !navigationNames.length) {
+        sectionEle.style.display = 'none';
+        return;
+      }
+
+      if(headerEle) {
+        const headerEleHeight = headerEle.offsetHeight;
+        sectionEle.style.top = headerEleHeight + 'px';
+        sectionEle.style.display = 'block';
+      }
+
+      targetEle.innerHTML = '';
+
+      navigationNames.forEach((navNode, index) => {
+        const parentSection = navNode.closest('section[id^="shopify-section-template"]');
+        if (!parentSection) return;
+
+        const id = parentSection.id;
+        const name = navNode.dataset.navigationName;
+
+        if (!name) return;
+
+        const div = document.createElement('div');
+        div.className = `common-tabbar-item${index === 0 ? ' active' : ''}`;
+        div.dataset.id = id;
+        div.textContent = name;
+
+        targetEle.appendChild(div);
+      });
+
+      targetEle.addEventListener('click', (e) => {
+        const item = e.target.closest('.common-tabbar-item');
+        if (!item) return;
+
+        const targetSection = document.getElementById(item.dataset.id);
+        if (!targetSection) return;
+
+        item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+
+        targetEle.querySelectorAll('.common-tabbar-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+
+
+  </script>
+</navigation-tab>
+{% schema %}
+{
+  "name": "Navigation tab",
+  "class": "navigation-tab",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "component_bg_color",
+      "label": "Component background color",
+      "default": "#253148"
+    },
+    {
+      "type": "color",
+      "id": "component_text_color",
+      "label": "Component text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#575757"
+    },
+    {
+      "type": "color",
+      "id": "active_button_bg_color",
+      "label": "Active button background color",
+      "default": "#7792ba"
+    },
+    {
+      "type": "color",
+      "id": "active_button_text_color",
+      "label": "Active button text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Navigation tab"
+    }
+  ]
+}
+{% endschema %}

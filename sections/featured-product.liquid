@@ -39,7 +39,11 @@
   }
 </style>
 
-<div {% render 'section-properties', tight: true %}>
+<div {% render 'section-properties', tight: true %}
+        {% if section.settings.navigation_name != blank %}
+          data-navigation-name="{{ section.settings.navigation_name }}"
+        {% endif %}
+>
   {%- capture product_form_id -%}featured-product-form-{{ section.id }}{%- endcapture -%}
 
   <product-rerender id="featured-product-{{ section.id }}" observe-form="{{ product_form_id }}" allow-partial-rerender>
@@ -49,9 +53,9 @@
           {%- render 'product-gallery', product: section.settings.product, product_form_id: product_form_id -%}
         {%- endif -%}
 
-        {%- render 'product-info', 
-          product: section.settings.product, 
-          product_form_id: product_form_id, 
+        {%- render 'product-info',
+          product: section.settings.product,
+          product_form_id: product_form_id,
           update_url: false,
           context: 'featured_product'
         -%}
@@ -111,23 +115,23 @@
 
                   {%- liquid
                     assign quantity_rules = ''
-    
+
                     if variant.quantity_rule.min > 1
                       assign rule = 'product.quantity.minimum_of' | t: min: variant.quantity_rule.min
                       assign quantity_rules = quantity_rules | append: ' / ' | append: rule
                     endif
-    
+
                     if variant.quantity_rule.max != nil
                       assign rule = 'product.quantity.maximum_of' | t: max: variant.quantity_rule.max
                       assign quantity_rules = quantity_rules | append: ' / ' | append: rule
                     endif
-    
+
                     if variant.quantity_rule.increment > 1
                       assign rule = 'product.quantity.increment_of' | t: step: variant.quantity_rule.increment
                       assign quantity_rules = quantity_rules | append: ' / ' | append: rule
                     endif
                   -%}
-    
+
                   {%- if quantity_rules != blank -%}
                     <p class="text-subdued text-sm">{{ quantity_rules | remove_first: ' / ' | capitalize }}</p>
                   {%- endif -%}
@@ -1702,6 +1706,11 @@
     }
   ],
   "settings": [
+    {
+      "type": "text",
+      "id": "navigation_name",
+      "label": "Navigation name"
+    },
     {
       "type": "checkbox",
       "id": "full_width",
