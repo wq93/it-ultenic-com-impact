@@ -1,0 +1,1478 @@
+
+
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132309').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132309-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132274').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132299"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132265').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132265-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132327').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132293"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132266').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132266-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132242').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132250').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132250-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132268').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132256').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132256-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132286').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132312').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132312-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132271').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380735').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380735-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380753').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380650').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380650-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380786').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380702').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380702-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380746').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380724').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380724-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736494380711').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132379"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"jack-in-the-box","delay":0,"duration":500},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132346"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"jack-in-the-box","delay":0,"duration":500},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132333"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"jack-in-the-box","delay":0,"duration":500},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132314"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"jack-in-the-box","delay":0,"duration":500},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132260').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132260-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132260-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132319').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132372').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132372-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132372-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132318').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132345').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132345-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132345-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132288').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132377').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132377-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132377-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132306').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132302').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132302-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132302-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132214').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132283').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132283-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132283-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132362').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132231').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132231-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132231-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132218').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132213').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132213-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132213-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132365').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132255').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132255-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132255-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132370').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132361').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function(jQuery) {
+  var $module = jQuery('#m-1736492132361-0').children('.module');
+  var effect = $module.attr('data-effect');
+  var magnify = $module.attr('data-zoom-level');
+  var displayType = $module.attr('data-displaytype');
+  $module.gfV3ProductImage({
+    'effect': effect,
+    'displayType': displayType,
+    'magnify': magnify
+  });
+})(window.GemQuery || jQuery);
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132361-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132381').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1736492132378').children('.module');
+
+  var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+  if(mode == 'production') { 
+    $module.children('form').on('submit', function() {
+      try {
+        localStorage.setItem('gemId', '#m-1736492132378');
+      } catch(err) {}
+    });
+    
+    var gemId = '';
+    try {
+      var gemId = localStorage.getItem('gemId');
+    } catch(err) {}
+
+    if(gemId != '') {
+      var moduleId = '#' + $module.parent().attr('id');
+      if(gemId == moduleId) {
+        $module.find(".note").show();
+        
+        var $note = $module.find('.note.form-success, .note.form-error');
+        if ($note.length > 0) {
+          $popup = $module.closest('.module-wrap[data-label="Popup"]');
+          if ($popup.children('.module').data('gfv1popup')) {
+            $popup.children('.module').data('gfv1popup').show();
+          }
+        }
+          
+        var cbLink = $module.find('input[name="gemcallback"]').val() != undefined ? jQuery.trim($module.find('input[name="gemcallback"]').val()) : '';
+
+        if(cbLink && cbLink != '') {
+          try {
+            localStorage.setItem('gemId', 'redirected');
+          } catch(err) {}
+
+          var target = $module.attr("data-target") || '';
+          if(target!=="_blank"){
+            window.location.href = cbLink;
+          }else {
+            window.open(cbLink, '_blank')
+          }
+        }
+      }
+    } else {
+      var cbLink = $module.find('input[name="gemcallback"]').val() != undefined ? jQuery.trim($module.find('input[name="gemcallback"]').val()) : '';
+      
+      var $note = $module.find('.note.form-success, .note.form-error');
+      if ($note.length > 0) {
+        $popup = $module.closest('.module-wrap[data-label="Popup"]');
+        if ($popup.children('.module').data('gfv1popup')) {
+          $popup.children('.module').data('gfv1popup').show();
+        }
+      }
+
+      if(cbLink && cbLink != '') {
+        var target = $module.attr("data-target") || '';
+        if(target!=="_blank"){
+          window.location.href = cbLink;
+        }else {
+          window.open(cbLink, '_blank')
+        }
+      }
+    }
+  }
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132244').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132244-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132248').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132238"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132303').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132303-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132224').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132240"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132380').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132380-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132206').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132386"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132389').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132389-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132396').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  window.__gfAnimate.registerHover(jQuery("#e-1736492132195"), '{"animation":{"screens":{"lg":true,"md":true,"sm":true,"xs":true},"name":"bounce_","delay":0,"duration":500,"iteration-count":"1"},"interaction":{"key":"mouse-hover","type":"level2"}}');
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132398').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132398-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132401').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132409').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132409-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132411').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132412').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132412-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132416').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132419').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132419-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736492132420').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386932').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386932-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386873').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386849').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386849-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386927').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386885').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386885-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386842').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386896').children('.module');
+  $module.gfV3Product();
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386896-3').children('.module');
+  $module.gfV3ProductCartButton({ onItemAdded: function(data) {}});
+})( window.GemQuery || jQuery );
+  
+    (function( jQuery ){
+  var $module = jQuery('#m-1736495386916').children('.module');
+  var $product = $module.closest('[data-label="Product"]');
+  var productCurrentId = "";
+  if ($product.length > 0) {
+    productCurrentId = $product.attr("id");
+  }
+  var changeVariantFunction = function (variant) {
+    if(variant&&variant.id){
+      var productHandle = $module.attr("data-phandle");
+      var newHandle = "/products/"+productHandle+"?variant="+variant.id;
+      $module.find('a').attr("href",newHandle);
+    }
+  }
+  if (window.GEMSTORE) {
+    window.GEMSTORE.subscribe("product-" + productCurrentId + "-variant", changeVariantFunction);
+  }
+})( window.GemQuery || jQuery );
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+(function( jQuery ){
+  var $module = jQuery('#m-1736492132450').children('.module');
+
+  var mode = jQuery('.gryffeditor').hasClass('editing') ? 'dev' : 'production';
+  if(mode == 'production') { 
+    $module.children('form').on('submit', function() {
+      try {
+        localStorage.setItem('gemId', '#m-1736492132450');
+      } catch(err) {}
+    });
+    
+    var gemId = '';
+    try {
+      var gemId = localStorage.getItem('gemId');
+    } catch(err) {}
+
+    if(gemId != '') {
+      var moduleId = '#' + $module.parent().attr('id');
+      if(gemId == moduleId) {
+        $module.find(".note").show();
+        
+        var $note = $module.find('.note.form-success, .note.form-error');
+        if ($note.length > 0) {
+          $popup = $module.closest('.module-wrap[data-label="Popup"]');
+          if ($popup.children('.module').data('gfv1popup')) {
+            $popup.children('.module').data('gfv1popup').show();
+          }
+        }
+          
+        var cbLink = $module.find('input[name="gemcallback"]').val() != undefined ? jQuery.trim($module.find('input[name="gemcallback"]').val()) : '';
+
+        if(cbLink && cbLink != '') {
+          try {
+            localStorage.setItem('gemId', 'redirected');
+          } catch(err) {}
+
+          var target = $module.attr("data-target") || '';
+          if(target!=="_blank"){
+            window.location.href = cbLink;
+          }else {
+            window.open(cbLink, '_blank')
+          }
+        }
+      }
+    } else {
+      var cbLink = $module.find('input[name="gemcallback"]').val() != undefined ? jQuery.trim($module.find('input[name="gemcallback"]').val()) : '';
+      
+      var $note = $module.find('.note.form-success, .note.form-error');
+      if ($note.length > 0) {
+        $popup = $module.closest('.module-wrap[data-label="Popup"]');
+        if ($popup.children('.module').data('gfv1popup')) {
+          $popup.children('.module').data('gfv1popup').show();
+        }
+      }
+
+      if(cbLink && cbLink != '') {
+        var target = $module.attr("data-target") || '';
+        if(target!=="_blank"){
+          window.location.href = cbLink;
+        }else {
+          window.open(cbLink, '_blank')
+        }
+      }
+    }
+  }
+})( window.GemQuery || jQuery );
+    
+    
+    
+    
+    
+    
+  
+    
+  
