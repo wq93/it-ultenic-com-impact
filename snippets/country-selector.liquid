@@ -1,0 +1,256 @@
+<div
+        class="country-selector-popup-wrapper"
+        style="background:{{ settings.country_selector_background }};"
+        role="button"
+        tabindex="0"
+        aria-controls="country-selector-drawer"
+        aria-haspopup="dialog"
+>
+    <style>
+      .announcement-bar{
+        position: relative;
+      }
+        .country-selector-popup-wrapper {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          padding: 0 8px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      .country-selector-popup-wrapper span {
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      .country-selector-popup-wrapper img {
+        height: 24px;
+        width: 24px;
+        margin-right: 4px;
+      }
+
+      #country-selector-drawer .country-selector-drawer__list {
+        display: grid;
+        gap: 20px;
+      }
+
+      #country-selector-drawer .country-selector-drawer__item {
+        display: grid;
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      #country-selector-drawer .country-selector-drawer__flag {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        overflow: hidden;
+        display: grid;
+        place-items: center;
+        background: rgb(var(--text-color) / 0.06);
+      }
+
+      #country-selector-drawer .country-selector-drawer__flag .country-flags {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        filter: none;
+      }
+      #country-selector-drawer .country-selector-drawer__flag .country-flags img{
+        width: 34px;
+        height: 34px;
+        object-fit: cover;
+      }
+
+      #country-selector-drawer .country-selector-drawer__title {
+        font-weight: 600;
+        line-height: 1.2;
+      }
+
+      #country-selector-drawer .country-selector-drawer__meta {
+        color: rgb(var(--text-color) / 0.55);
+        font-size: 14px;
+        line-height: 1.2;
+        margin-top: 4px;
+      }
+
+      #country-selector-drawer .country-selector-drawer__meta--mobile {
+        display: none;
+      }
+
+      #country-selector-drawer .country-selector-drawer__item:hover .country-selector-drawer__title,
+      #country-selector-drawer .country-selector-drawer__item:hover .country-selector-drawer__meta {
+        color: #2164FF;
+      }
+
+      @media screen and (min-width: 700px) {
+        #country-selector-drawer .country-selector-drawer__list {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px 32px;
+        }
+      }
+
+      @media screen and (max-width: 699px) {
+        #country-selector-drawer .country-selector-drawer__list {
+          gap: 18px;
+        }
+
+        #country-selector-drawer .country-selector-drawer__item {
+          grid-template-columns: 44px minmax(0, 1fr);
+          align-items: center;
+        }
+
+        #country-selector-drawer .country-selector-drawer__content {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) max-content;
+          align-items: baseline;
+          gap: 12px;
+        }
+
+        #country-selector-drawer .country-selector-drawer__meta {
+          margin-top: 0;
+          justify-self: end;
+          text-align: right;
+          color: rgb(var(--text-color) / 0.55);
+        }
+
+        #country-selector-drawer .country-selector-drawer__meta--desktop {
+          display: none;
+        }
+
+        #country-selector-drawer .country-selector-drawer__meta--mobile {
+          display: block;
+        }
+      }
+    </style>
+    {% if settings.country_selector_icon %}
+        <img src="{{ settings.country_selector_icon | image_url: width: 24 }}" alt="country selector icon">
+    {% endif %}
+    <span>
+        {{ settings.country_selector_text }}
+    </span>
+</div>
+
+<x-drawer class="drawer drawer--lg" id="country-selector-drawer" header-bordered open-from="right">
+  <p class="h5" slot="header">Select your country or region</p>
+
+  <div class="country-selector-drawer__list" role="list">
+    <a class="country-selector-drawer__item" role="listitem" href="https://www.ultenic.com/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true">
+        <span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/country_selector_icon_095ca585-7fe9-4de0-8d4e-1daf800406a8.png?v=1766807348" alt="global"/>
+        </span>
+      </span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">Global</p>
+        </span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://www.ultenic.com/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true">
+        <span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/united-states.avif?v=1766806567" alt="united-states" />
+        </span>
+      </span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">United States</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">English / $ USD</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">English / $ USD</span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://uk.ultenic.com/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true">
+        <span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/united-kingdom.avif?v=1766806566" alt="united-kingdom" />
+        </span>
+      </span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">United Kingdom</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">English / £ GBP</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">English / £ GBP</span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://www.ultenic.fr/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true"><span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/france.avif?v=1766806565" alt="france"/>
+        </span></span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">France</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">Français / € EUR</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">Français / € EUR</span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://ultenic.de/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true"><span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/deutschland.avif?v=1766806566" alt="deutschland" />
+        </span></span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">Deutschland</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">Deutsch / € EUR</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">Deutsch / € EUR</span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://es.ultenic.com/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true"><span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/Espa.png?v=1766806567" alt="espa" />
+        </span></span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">España</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">Español / € EUR</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">Español / € EUR</span>
+      </span>
+    </a>
+
+    <a class="country-selector-drawer__item" role="listitem" href="https://it.ultenic.com/" data-no-instant>
+      <span class="country-selector-drawer__flag" aria-hidden="true"><span class="country-flags">
+          <img src="https://cdn.shopify.com/s/files/1/0362/1804/4549/files/Italy.png?v=1766806565" alt="italy" />
+        </span></span>
+      <span class="country-selector-drawer__content">
+        <span>
+          <p class="country-selector-drawer__title">Italy</p>
+          <span class="country-selector-drawer__meta country-selector-drawer__meta--desktop">Italiano / € EUR</span>
+        </span>
+        <span class="country-selector-drawer__meta country-selector-drawer__meta--mobile">Italiano / € EUR</span>
+      </span>
+    </a>
+  </div>
+</x-drawer>
+<script>
+  (function () {
+    const trigger = document.querySelector('.country-selector-popup-wrapper');
+    if (!trigger) return;
+
+    trigger.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        trigger.click();
+      }
+    });
+
+    const triggerWidth = trigger.offsetWidth;
+    const announcementBar = document.querySelector('.announcement-bar');
+    if(announcementBar && triggerWidth) {
+      announcementBar.style.paddingRight = triggerWidth + 'px';
+    }
+  })();
+</script>

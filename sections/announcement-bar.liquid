@@ -81,6 +81,12 @@
           </div>
         </div>
       {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'country_selector' -%}
+            {%- render 'country-selector', settings: block.settings -%}
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </height-observer>
 
@@ -110,6 +116,29 @@
           "type": "url",
           "id": "url",
           "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "country_selector",
+      "name": "Country selector popup",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "country_selector_icon",
+          "label": "Country selector icon",
+          "info": "16 x 16px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "country_selector_text",
+          "label": "Country selector text",
+          "default": "United States (English / $ USD)"
+        },
+        {
+          "type": "color",
+          "id": "country_selector_background",
+          "label": "Country selector background"
         }
       ]
     }
