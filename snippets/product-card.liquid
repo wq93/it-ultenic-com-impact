@@ -77,7 +77,7 @@ Supported variables
 
         {%- liquid
           assign main_media_loading_strategy = nil
-          
+
           if section.index > 3 or position > 3
             assign main_media_loading_strategy = 'lazy'
           endif
@@ -165,7 +165,12 @@ Supported variables
       {%- else -%}
         <span class="product-card__title"><a href="{{ product.url }}" class="bold" data-instant>{{ product.title }}</a></span>
       {%- endif -%}
-
+        <div class="product-card__content">
+            {{ product.description }}
+        </div>
+        <div class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}">
+            {{ product.metafields.judgeme.badge }}
+        </div>
       {%- render 'price-list', product: product, text_alignment: text_alignment -%}
       {% render 'elsklip_collection_block', product: product, short: true %}
     </div>
@@ -181,7 +186,7 @@ Supported variables
       {%- for color_label in color_label_list -%}
         {%- if product.options_by_name[color_label] != blank -%}
           {%- assign product_option = product.options_by_name[color_label] -%}
-          
+
           <div class="product-card__aside">
             {%- case settings.product_color_display -%}
               {%- when 'count' -%}
@@ -207,7 +212,7 @@ Supported variables
               {%- when 'variant' -%}
                 <fieldset class="product-card__variant-list" data-option-position="{{ product_option.position }}">
                   <legend class="sr-only">{{ product_option.name }}</legend>
-                  
+
                   {%- capture param_name -%}swatch-{{ quick_buy_context }}-{{ section.id }}-{{ product.id }}-{{ product_option.position }}{%- endcapture -%}
 
                   {%- for option_value in product_option.values limit: 4 -%}
