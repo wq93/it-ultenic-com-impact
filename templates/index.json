@@ -38,6 +38,7 @@
       "block_order": [
         "image_dE3MHk"
       ],
+      "disabled": true,
       "settings": {
         "navigation_name": "",
         "full_width": true,
@@ -175,7 +176,6 @@
         "image_apjhbT",
         "image_MrKEQn"
       ],
-      "disabled": true,
       "settings": {
         "navigation_name": "",
         "full_width": true,
@@ -306,7 +306,6 @@
     },
     "scrolling-text": {
       "type": "scrolling-text",
-      "disabled": true,
       "settings": {
         "full_width": false,
         "text": "TORNA A CASA NEL FUTURO",
