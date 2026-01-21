@@ -1,0 +1,199 @@
+<div id="shopify-block-{{ block.id }}">
+  <style>
+    #shopify-block-{{ block.id }} {
+      padding: 0;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+      align-items: center;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+      padding-right: max(var(--container-gutter), 50% - var(--container-max-width) / 2);
+      border-radius: {{ block.settings.border_radius }}px;
+      background: linear-gradient(180deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.03)), {{ block.settings.card_background }};
+      color: {{ block.settings.card_text_color }};
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__image {
+      width: 140px;
+      height: 140px;
+      border-radius: {{ block.settings.image_border_radius }}px;
+      overflow: hidden;
+      background: rgb(0 0 0 / 0.04);
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__content {
+      display: grid;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__compare {
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.6;
+      text-decoration: line-through;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__desc {
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.88;
+      margin: 0;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: {{ block.settings.button_background }};
+      color: {{ block.settings.button_text_color }};
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid {{ block.settings.button_border_color }};
+      transition: transform 120ms ease, box-shadow 120ms ease;
+    }
+
+    #shopify-block-{{ block.id }} .blog-product-card__btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgb(0 0 0 / 0.18);
+    }
+
+    @media screen and (max-width: 749px) {
+      #shopify-block-{{ block.id }} .blog-product-card {
+        grid-template-columns: 110px 1fr;
+        padding: 18px;
+        gap: 14px;
+      }
+
+      #shopify-block-{{ block.id }} .blog-product-card__image {
+        width: 110px;
+        height: 110px;
+      }
+    }
+  </style>
+
+  {%- assign product = block.settings.product -%}
+
+  {%- if product != blank -%}
+    {%- assign variant = product.selected_or_first_available_variant -%}
+    <div
+      class="blog-product-card"
+      data-blog-product-card-root
+      data-block-id="{{ block.id }}"
+      data-position-title="{{ block.settings.position_title | escape }}"
+      style="display: none;"
+    >
+      <a class="blog-product-card__image" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+        {%- if product.featured_media != blank -%}
+          {{-
+            product.featured_media
+            | image_url: width: 600
+            | image_tag: loading: 'lazy', widths: '200,300,400,500,600', sizes: '140px'
+          -}}
+        {%- endif -%}
+      </a>
+
+      <div class="blog-product-card__content">
+        <p class="blog-product-card__title">{{ product.title }}</p>
+
+        <div class="blog-product-card__price">
+          <span>
+            {%- if settings.currency_code_enabled -%}
+              {{- variant.price | money_with_currency -}}
+            {%- else -%}
+              {{- variant.price | money -}}
+            {%- endif -%}
+          </span>
+
+          {%- if variant.compare_at_price > variant.price -%}
+            <span class="blog-product-card__compare">
+              {%- if settings.currency_code_enabled -%}
+                {{- variant.compare_at_price | money_with_currency -}}
+              {%- else -%}
+                {{- variant.compare_at_price | money -}}
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        </div>
+
+        <p class="blog-product-card__desc">
+          {{ product.description | strip_html | truncate: block.settings.description_limit }}
+        </p>
+
+        <div class="blog-product-card__actions">
+          <a class="blog-product-card__btn" href="{{ product.url }}">{{ block.settings.button_text }}</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const productCard = document.querySelector('[data-block-id="{{ block.id }}"]');
+        if (!productCard) return;
+
+        if (productCard.dataset.positioned === 'true') return;
+        productCard.dataset.positioned = 'true';
+
+        const positionTitle = productCard.dataset.positionTitle;
+        let inserted = false;
+
+        if (positionTitle) {
+          const headings = document.querySelectorAll(
+            '.article-content .prose h1, .article-content .prose h2, .article-content .prose h3, .article-content .prose h4, .article-content .prose h5, .article-content .prose h6'
+          );
+
+          for (let i = 0; i < headings.length; i++) {
+            const heading = headings[i];
+            if (heading.innerHTML && heading.innerHTML.includes(positionTitle)) {
+              let insertAfter = heading;
+              const cardWrapper = productCard.parentElement;
+              insertAfter.parentNode.insertBefore(cardWrapper, insertAfter.nextSibling);
+              inserted = true;
+              break;
+            }
+          }
+        }
+
+        // 显示产品卡片（无论是否成功插入到指定位置）
+        productCard.style.display = '';
+      })();
+    </script>
+  {%- endif -%}
+</div>

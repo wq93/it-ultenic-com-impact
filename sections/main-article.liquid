@@ -130,6 +130,8 @@
 
         {%- when 'comments' -%}
           {%- render 'article-comments', show_gravatar: block.settings.show_gravatar, comments_pagination: block.settings.comments_per_page, block_attributes: block.shopify_attributes -%}
+        {%- when 'product_card' -%}
+          {%- render 'article-product-card', block: block -%}
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -282,6 +284,87 @@
           "max": 50,
           "step": 5,
           "default": 5
+        }
+      ]
+    },
+    {
+      "name": "Product card",
+      "type": "product_card",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "position_title",
+          "label": "Position title",
+          "info": "Insert the product card after the element containing this text in the article content"
+        },
+        {
+          "type": "range",
+          "id": "description_limit",
+          "label": "Description length",
+          "min": 40,
+          "max": 240,
+          "step": 10,
+          "default": 140
+        },
+        {
+          "type": "color",
+          "id": "card_background",
+          "label": "Card background",
+          "default": "#1c1f24"
+        },
+        {
+          "type": "color",
+          "id": "card_text_color",
+          "label": "Card text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Card border radius",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "image_border_radius",
+          "label": "Image border radius",
+          "min": 0,
+          "max": 30,
+          "step": 2,
+          "default": 12
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "Button background",
+          "default": "#37b3ff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_border_color",
+          "label": "Button border color",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Learn More"
         }
       ]
     }
