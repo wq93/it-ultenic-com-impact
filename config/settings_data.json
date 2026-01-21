@@ -38,7 +38,7 @@
     "text_font": "din_next_n4",
     "heading_apparition": "split_fade",
     "show_product_rating": false,
-    "show_discount": false,
+    "show_discount": true,
     "product_color_display": "swatch",
     "product_info_alignment": "center",
     "cart_icon": "shopping_basket",
