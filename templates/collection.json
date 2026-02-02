@@ -15,8 +15,8 @@
         "image_rpVjUT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/homepage_Banner_PC_89175508-5e1d-4e75-8885-d93249a96f17.jpg",
-            "mobile_image": "shopify://shop_images/homepage_Banner_App_a7d1e103-9388-42f3-9ab9-9ebd42e99ad8.jpg",
+            "image": "shopify://shop_images/homepage_Banner_PC_219661d6-494c-4e1c-94e9-d200003b9fbb.png",
+            "mobile_image": "shopify://shop_images/homepage_Banner_App_3ac3e405-f9f7-4235-8197-7b0af09d896f.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -24,7 +24,7 @@
             "title": "",
             "heading_tag": "h0",
             "button_text": "",
-            "button_link": "shopify://pages/promo-capodanno-2026",
+            "button_link": "shopify://pages/buon-san-valentino-2026",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -38,7 +38,6 @@
       "block_order": [
         "image_rpVjUT"
       ],
-      "disabled": true,
       "settings": {
         "navigation_name": "",
         "full_width": true,

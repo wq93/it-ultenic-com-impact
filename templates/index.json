@@ -15,8 +15,8 @@
         "image_dE3MHk": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/homepage_Banner_PC_89175508-5e1d-4e75-8885-d93249a96f17.jpg",
-            "mobile_image": "shopify://shop_images/homepage_Banner_App_a7d1e103-9388-42f3-9ab9-9ebd42e99ad8.jpg",
+            "image": "shopify://shop_images/homepage_Banner_PC_d4a319f0-dfe3-4d9d-a54b-5ba9d51a035e.png",
+            "mobile_image": "shopify://shop_images/homepage_Banner_M_5431d351-8e32-4b0e-a3ae-776a0a411142.png",
             "content_max_width": 840,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
@@ -24,7 +24,7 @@
             "title": "",
             "heading_tag": "h2",
             "button_text": "",
-            "button_link": "shopify://pages/promo-capodanno-2026",
+            "button_link": "shopify://pages/buon-san-valentino-2026",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -38,7 +38,6 @@
       "block_order": [
         "image_dE3MHk"
       ],
-      "disabled": true,
       "settings": {
         "navigation_name": "",
         "full_width": true,
@@ -382,6 +381,7 @@
         "navigation_name": "",
         "collection": "",
         "products": [
+          "ultenic-u18-powerpro-aspirapolvere-senza-fili",
           "ultenic-pooleco-s1-skimmer-per-piscina-robotico-solare",
           "ultenic-u15-aspirapolvere-senza-fili",
           "ultenic-t20-pro",
