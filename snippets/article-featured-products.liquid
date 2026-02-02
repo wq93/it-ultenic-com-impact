@@ -1,0 +1,165 @@
+<div
+  class="article-featured-products"
+  id="featured-products-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <style>
+    /* Sidebar position styles - fixed on right side */
+    #featured-products-{{ block.id }}.article-featured-products {
+      width: 270px;
+      flex-shrink: 0;
+    }
+
+    #featured-products-{{ block.id }} .featured-wrapper {
+      position: sticky;
+      top: calc(var(--header-height, 80px) + 20px);
+      background: {{ block.settings.background_color | default: '#5d5d60' }};
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: calc(100vh - var(--header-height, 80px) - 40px);
+      overflow-y: auto;
+    }
+
+    #featured-products-{{ block.id }} .featured-header {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+    }
+
+    #featured-products-{{ block.id }} .featured-products-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-card {
+      background: {{ block.settings.card_background | default: '#2a2d35' }};
+      border-radius: 8px;
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-image {
+      width: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+      margin-bottom: 8px;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-price {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    #featured-products-{{ block.id }} .featured-price-current {
+      font-size: 18px;
+      font-weight: 700;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+    }
+
+    #featured-products-{{ block.id }} .featured-price-compare {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: line-through;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-button {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: {{ block.settings.button_background | default: '#00a2e4' }};
+      color: {{ block.settings.button_text_color | default: '#ffffff' }};
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+    }
+
+    #featured-products-{{ block.id }} .featured-product-button:hover {
+      opacity: 0.8;
+    }
+
+    /* Responsive - hide on small screens */
+    @media screen and (max-width: 1150px) {
+      #featured-products-{{ block.id }}.article-featured-products {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="featured-wrapper">
+    <div class="featured-header">{{ block.settings.title | default: 'Featured Products' }}</div>
+
+    <div class="featured-products-list">
+      {%- assign has_products = false -%}
+      {%- for i in (1..4) -%}
+        {%- assign product_key = 'product_' | append: i -%}
+        {%- assign product = block.settings[product_key] -%}
+
+        {%- if product != blank -%}
+          {%- assign has_products = true -%}
+          <div class="featured-product-card">
+            <div class="featured-product-image">
+              {%- if product.featured_image -%}
+                <a href="{{ product.url }}">
+                  {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: product.title }}
+                </a>
+              {%- endif -%}
+            </div>
+
+            <div class="featured-product-title">
+              {{ product.title }}
+            </div>
+
+            <div class="featured-product-price">
+              <span class="featured-price-current">
+                {{ product.price | money }}
+              </span>
+              {%- if product.compare_at_price > product.price -%}
+                <span class="featured-price-compare">
+                  {{ product.compare_at_price | money }}
+                </span>
+              {%- endif -%}
+            </div>
+
+            <a href="{{ product.url }}" class="featured-product-button">
+              {{ block.settings.button_text | default: 'Learn More' }}
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if has_products == false -%}
+        <div style="text-align: center; padding: 20px; color: rgba(255, 255, 255, 0.5); font-size: 13px;">
+          No products selected. Add products in theme settings.
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

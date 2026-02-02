@@ -1,0 +1,160 @@
+<div class="table-of-contents" id="article-toc-{{ block.id }}" {{ block.shopify_attributes }}>
+  <style>
+    #article-toc-{{ block.id }} {
+      width: 270px;
+      flex-shrink: 0;
+      padding-top: 64px;
+    }
+
+    #article-toc-{{ block.id }} .toc-sticky-wrapper {
+      position: sticky;
+      top: calc(var(--header-height, 80px) + 20px);
+      background: {{ block.settings.background_color | default: '#5d5d60' }};
+      border-radius: {{ block.settings.border_radius | default: 12 }}px;
+      padding: 20px;
+      max-height: calc(100vh - var(--header-height, 80px) - 40px);
+      overflow-y: auto;
+    }
+
+    #article-toc-{{ block.id }} .toc-header {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+    }
+
+    #article-toc-{{ block.id }} .toc-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #article-toc-{{ block.id }} .toc-link {
+      color: {{ block.settings.link_color | default: '#a0a0a0' }};
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 1.5;
+      transition: color 0.2s ease;
+      display: block;
+      padding: 8px 0;
+    }
+
+    #article-toc-{{ block.id }} .toc-link:hover,
+    #article-toc-{{ block.id }} .toc-link.active {
+      color: {{ block.settings.active_color | default: '#00a2e4' }};
+    }
+
+    #article-toc-{{ block.id }} .toc-link.toc-h3 {
+      padding-left: 16px;
+      font-size: 13px;
+    }
+
+    #article-toc-{{ block.id }} .toc-link.toc-h4 {
+      padding-left: 32px;
+      font-size: 12px;
+    }
+
+    #article-toc-{{ block.id }} .toc-link.toc-h5 {
+      padding-left: 48px;
+      font-size: 11px;
+    }
+
+    #article-toc-{{ block.id }} .toc-link.toc-h6 {
+      padding-left: 64px;
+      font-size: 11px;
+    }
+
+    @media screen and (max-width: 1150px) {
+      #article-toc-{{ block.id }} {
+        display: none;
+      }
+    }
+  </style>
+  <div class="toc-sticky-wrapper">
+    <div class="toc-header">{{ block.settings.title | default: 'Table of Contents' }}</div>
+    <nav class="toc-nav" id="toc-nav-{{ block.id }}">
+      <!-- Will be populated by JavaScript -->
+    </nav>
+  </div>
+  <script>
+    // Wait for DOM to be fully loaded before initializing TOC
+    function initTableOfContents() {
+      const tocNav = document.getElementById('toc-nav-{{ block.id }}');
+      const articleContent = document.querySelector('.article-content .prose');
+
+      if (!tocNav || !articleContent) {
+        // Retry after a short delay if elements are not ready
+        setTimeout(initTableOfContents, 100);
+        return;
+      }
+
+      // Extract all h2, h3, h4, h5, h6 tags from article content
+      const headings = articleContent.querySelectorAll('h2, h3, h4, h5, h6');
+
+      if (headings.length === 0) {
+        // Hide TOC if no headings found
+        const tocContainer = document.getElementById('article-toc-{{ block.id }}');
+        if (tocContainer) tocContainer.style.display = 'none';
+        return;
+      }
+
+      headings.forEach((heading, index) => {
+        // Add ID to heading if it doesn't have one
+        if (!heading.id) {
+          heading.id = `heading-${index}`;
+        }
+        // Create TOC link
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.innerText;
+        link.className = `toc-link toc-${heading.tagName.toLowerCase()}`;
+
+        // Smooth scroll on click
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById(heading.id);
+          if (target) {
+            const headerOffset = {{ block.settings.scroll_offset | default: 100 }};
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+
+            // Update active state
+            document.querySelectorAll('#toc-nav-{{ block.id }} .toc-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+          }
+        });
+
+        tocNav.appendChild(link);
+      });
+
+      // Highlight active section on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            document.querySelectorAll('#toc-nav-{{ block.id }} .toc-link').forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      }, {
+        rootMargin: '-100px 0px -66%'
+      });
+
+      headings.forEach(heading => observer.observe(heading));
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTableOfContents);
+    } else {
+      // DOM already loaded, run immediately
+      initTableOfContents();
+    }
+  </script>
+</div>

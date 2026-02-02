@@ -1,0 +1,100 @@
+<div
+  class="article-deals-collaborations"
+  id="deals-collaborations-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <style>
+    /* Sidebar position styles - fixed on right side */
+    #deals-collaborations-{{ block.id }}.article-deals-collaborations {
+      width: 270px;
+      flex-shrink: 0;
+      padding-top: 60px;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-wrapper {
+      position: sticky;
+      top: calc(var(--header-height, 80px) + 20px);
+      background: {{ block.settings.background_color | default: '#5d5d60' }};
+      border-radius: 12px;
+      padding: 24px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: calc(100vh - var(--header-height, 80px) - 40px);
+      overflow-y: auto;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-header {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+      text-align: center;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-images {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-image-wrapper {
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-image-wrapper:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 162, 228, 0.3);
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    #deals-collaborations-{{ block.id }} .deals-image-wrapper a {
+      display: block;
+    }
+
+    /* Responsive - hide on small screens */
+    @media screen and (max-width: 1150px) {
+      #deals-collaborations-{{ block.id }}.article-deals-collaborations {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="deals-wrapper">
+    {%- if block.settings.title != blank -%}
+      <div class="deals-header">{{ block.settings.title }}</div>
+    {%- endif -%}
+
+    <div class="deals-images">
+      {%- if block.settings.image_1 != blank -%}
+        <div class="deals-image-wrapper">
+          {%- if block.settings.image_1_link != blank -%}
+            <a href="{{ block.settings.image_1_link }}" target="_blank" rel="noopener noreferrer">
+              {{ block.settings.image_1 | image_url: width: 500 | image_tag: loading: 'lazy' }}
+            </a>
+          {%- else -%}
+            {{ block.settings.image_1 | image_url: width: 500 | image_tag: loading: 'lazy' }}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if block.settings.image_2 != blank -%}
+        <div class="deals-image-wrapper">
+          {%- if block.settings.image_2_link != blank -%}
+            <a href="{{ block.settings.image_2_link }}" target="_blank" rel="noopener noreferrer">
+              {{ block.settings.image_2 | image_url: width: 500 | image_tag: loading: 'lazy' }}
+            </a>
+          {%- else -%}
+            {{ block.settings.image_2 | image_url: width: 500 | image_tag: loading: 'lazy' }}
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

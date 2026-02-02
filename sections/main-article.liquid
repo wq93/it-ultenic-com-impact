@@ -1,6 +1,8 @@
 {%- render 'section-spacing-collapsing' -%}
 
-{%- assign background_color = article.metafields.banner.background_color.value | default: section.settings.banner_background -%}
+{%- assign background_color = article.metafields.banner.background_color.value
+        | default: section.settings.banner_background
+-%}
 {%- assign text_color = article.metafields.banner.text_color.value | default: section.settings.banner_text_color -%}
 {%- assign article_image = section.settings.image | default: article.image -%}
 
@@ -9,10 +11,10 @@
     --article-banner-background: {%- if background_color != blank -%}{{ background_color.rgb }}{%- else -%}var(--text-color) / 0.05{%- endif -%};
     --article-banner-badge-background: var(--text-color) / 0.12;
 
-    {% if text_color != blank %}
-      --text-color: {{ text_color.rgb }};
-    {% endif %}
-   }
+  {% if text_color != blank %}
+    --text-color: {{ text_color.rgb }};
+  {% endif %}
+  }
 
   #shopify-section-{{ section.id }} {
     --article-max-width: {{ section.settings.content_width }};
@@ -25,113 +27,197 @@
     --article-banner-content-padding-inline: var(--container-gutter);
     --article-banner-image-overlay: {% if section.settings.layout == 'image_text_overlay' %}{{ section.settings.overlay_color.rgb }} / {{ section.settings.overlay_opacity | divided_by: 100.0 }}{% else %}0 0 0 / 0{% endif %};
 
-    {%- if section.settings.allow_transparent_header -%}
-      --article-banner-padding-block-start: var(--header-height);
+  {%- if section.settings.allow_transparent_header -%}
+    --article-banner-padding-block-start: var(--header-height);
 
-      margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
-    {%- endif -%}
+    margin-block-start: calc(-1 * var(--header-height) * var(--section-is-first));
+  {%- endif -%}
   }
 
   {%- if article_image == blank -%}
-    #shopify-section-{{ section.id }} {
-      --article-banner-grid-area: auto;
-    }
+  #shopify-section-{{ section.id }} {
+    --article-banner-grid-area: auto;
+  }
 
-    @media screen and (min-width: 700px) {
-      #shopify-section-{{ section.id }} {
-        --article-banner-content-padding-block-start: {% if section.settings.allow_transparent_header %}var(--spacing-4){% else %}var(--spacing-12){% endif %};
-        --article-banner-content-padding-block-end: var(--spacing-12);
-      }
+  @media screen and (min-width: 700px) {
+    #shopify-section-{{ section.id }} {
+      --article-banner-content-padding-block-start: {% if section.settings.allow_transparent_header %}var(--spacing-4){% else %}var(--spacing-12){% endif %};
+      --article-banner-content-padding-block-end: var(--spacing-12);
     }
+  }
   {%- endif -%}
 
   {%- if article_image != blank -%}
-    @media screen and (min-width: 1150px) {
-      #shopify-section-{{ section.id }} {
-        --article-banner-before-height: calc(100% - (var(--article-banner-image-offset) * min(100vw, var(--container-max-width))));
-        --article-banner-image-offset: {% if section.settings.layout == 'content_first' %}0.12{% else %}0.07{% endif %};
-        --article-banner-grid: {% if section.settings.layout == 'image_left_text_right' %}"image content" / {% if article_image.aspect_ratio <= 1 %}5fr 7fr{% else %}7fr 5fr{% endif %}{% elsif section.settings.layout == 'image_text_overlay' %}auto{% endif %};
+  @media screen and (min-width: 1150px) {
+    #shopify-section-{{ section.id }} {
+      --article-banner-before-height: calc(100% - (var(--article-banner-image-offset) * min(100vw, var(--container-max-width))));
+      --article-banner-image-offset: {% if section.settings.layout == 'content_first' %}0.12{% else %}0.07{% endif %};
+      --article-banner-grid: {% if section.settings.layout == 'image_left_text_right' %}"image content" / {% if article_image.aspect_ratio <= 1 %}5fr 7fr{% else %}7fr 5fr{% endif %}{% elsif section.settings.layout == 'image_text_overlay' %}auto{% endif %};
 
-        {% unless section.settings.allow_transparent_header %}
-          --article-banner-padding-block-start: var(--spacing-9);
-        {% endunless %}
+    {% unless section.settings.allow_transparent_header %}
+      --article-banner-padding-block-start: var(--spacing-9);
+    {% endunless %}
 
-        {%- if section.settings.layout == 'image_text_overlay' or section.settings.layout == 'content_first' -%}
-          --article-banner-grid-area: {% if section.settings.layout == 'image_text_overlay' %}1 / -1{% elsif section.settings.layout == 'content_first' %}auto{% endif %};
-        {%- endif -%}
+    {%- if section.settings.layout == 'image_text_overlay' or section.settings.layout == 'content_first' -%}
+      --article-banner-grid-area: {% if section.settings.layout == 'image_text_overlay' %}1 / -1{% elsif section.settings.layout == 'content_first' %}auto{% endif %};
+    {%- endif -%}
 
-        {%- unless section.settings.layout == 'image_text_overlay' -%}
-          --article-banner-content-padding-inline: 0;
-        {%- endunless -%}
+    {%- unless section.settings.layout == 'image_text_overlay' -%}
+      --article-banner-content-padding-inline: 0;
+    {%- endunless -%}
 
-        {%- if section.settings.layout == 'image_left_text_right' -%}
-          --article-banner-vertical-alignement: start;
-          --article-banner-meta-vertical-alignment: flex-start;
-          --article-banner-horizontal-alignement: flex-end;
-          --article-banner-content-padding-block-end: calc((100% - var(--article-banner-before-height)) + var(--spacing-10));
-        {%- elsif section.settings.layout == 'image_text_overlay' -%}
-          --article-banner-badge-background: 0 0 0 / 0 ;
-        {%- else-%}
-          {% if section.settings.allow_transparent_header %}
-            --article-banner-content-padding-block-start: var(--spacing-12)
-          {% endif %};
+    {%- if section.settings.layout == 'image_left_text_right' -%}
+      --article-banner-vertical-alignement: start;
+      --article-banner-meta-vertical-alignment: flex-start;
+      --article-banner-horizontal-alignement: flex-end;
+      --article-banner-content-padding-block-end: calc((100% - var(--article-banner-before-height)) + var(--spacing-10));
+    {%- elsif section.settings.layout == 'image_text_overlay' -%}
+      --article-banner-badge-background: 0 0 0 / 0 ;
+    {%- else-%}
+    {% if section.settings.allow_transparent_header %}
+      --article-banner-content-padding-block-start: var(--spacing-12)
+    {% endif %};
 
-          --article-banner-max-width: 1000px;
-        {%- endif -%}
-      }
+      --article-banner-max-width: 1400px;
+    {%- endif -%}
     }
+  }
 
-    @media screen and (min-width: 1400px) {
-      #shopify-section-{{ section.id }} {
-        {%- if section.settings.layout == 'image_left_text_right' -%}
-          --article-banner-column-gap: var(--spacing-16);
-          --article-banner-content-padding-block-end: calc((100% - var(--article-banner-before-height)) + var(--spacing-20));
-        {%- endif -%}
-      }
+  @media screen and (min-width: 1400px) {
+    #shopify-section-{{ section.id }} {
+    {%- if section.settings.layout == 'image_left_text_right' -%}
+      --article-banner-column-gap: var(--spacing-16);
+      --article-banner-content-padding-block-end: calc((100% - var(--article-banner-before-height)) + var(--spacing-20));
+    {%- endif -%}
     }
+  }
   {%- endif -%}
 </style>
 
-<div class="article" {% if section.settings.allow_transparent_header %}allow-transparent-header{% endif %}>
-  {%- render 'article-banner', show_date: section.settings.show_date, show_author: section.settings.show_author, show_comments_count: section.settings.show_comments_count, layout: section.settings.layout, article_image: article_image -%}
+<div
+        class="article"
+        {% if section.settings.allow_transparent_header %}
+          allow-transparent-header
+        {% endif %}
+>
+  {%- render 'article-banner',
+          show_date: section.settings.show_date,
+          show_author: section.settings.show_author,
+          show_comments_count: section.settings.show_comments_count,
+          layout: section.settings.layout,
+          article_image: article_image
+  -%}
 
   <div class="container">
-    <div class="article-content v-stack gap-8 sm:gap-10">
-      <div class="prose">
-        {{ article.content }}
+    <div class="article-content-wrapper" style="display: flex; gap: 40px; position: relative;">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'table_of_contents' -%}
+          {%- render 'article-table-of-contents', block: block -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      <div class="article-content v-stack gap-8 sm:gap-10" style="flex: 1; min-width: 0;">
+        <div class="prose">
+          {{ article.content }}
+        </div>
+
+        {%- if section.settings.show_share_buttons -%}
+          <div class="share-buttons gap-3">
+            {%- assign share_label = 'general.social.share' | t -%}
+            {%- assign share_url = shop.url | append: article.url -%}
+
+            <button
+                    class="button button--subdued button--lg w-full h-stack gap-3 align-center justify-center sm:hidden"
+                    is="share-button"
+                    style="--button-background: 0 0 0 / 0"
+                    share-url="{{ share_url | escape }}"
+                    share-title="{{ article.title | escape }}"
+            >
+              {%- render 'icon' with 'share', with: 18, height: 18 -%}
+              {{- 'general.social.share' | t -}}
+            </button>
+
+            <span class="bold sm-max:hidden">{{- share_label -}}</span>
+
+            <ul class="h-stack sm-max:hidden gap-3" role="list">
+              <li>
+                <a
+                        href="{% render 'share-link', host: 'facebook', title: article.title, url: article.url %}"
+                        class="share-buttons__item"
+                        aria-label="{{ 'general.social.share_on' | t: social_media: 'Facebook' }}"
+                >
+                  {%- render 'icon' with 'facebook', width: 24, height: 24 -%}
+                </a>
+              </li>
+              <li>
+                <a
+                        href="{% render 'share-link', host: 'twitter', title: article.title, url: article.url %}"
+                        class="share-buttons__item"
+                        aria-label="{{ 'general.social.share_on' | t: social_media: 'Twitter' }}"
+                >
+                  {%- render 'icon' with 'twitter', width: 24, height: 24 -%}
+                </a>
+              </li>
+              <li>
+                <a
+                        href="{% render 'share-link', host: 'pinterest', title: article.title, url: article.url %}"
+                        class="share-buttons__item"
+                        aria-label="{{ 'general.social.share_on' | t: social_media: 'Pinterest' }}"
+                >
+                  {%- render 'icon' with 'pinterest', width: 24, height: 24 -%}
+                </a>
+              </li>
+              <li>
+                <a
+                        href="{% render 'share-link', host: 'email', title: article.title, url: article.url %}"
+                        class="share-buttons__item"
+                        aria-label="{{ 'general.social.share_email' | t }}"
+                >
+                  {%- render 'icon' with 'email' -%}
+                </a>
+              </li>
+            </ul>
+          </div>
+        {%- endif -%}
       </div>
 
-      {%- if section.settings.show_share_buttons -%}
-        <div class="share-buttons gap-3">
-          {%- assign share_label = 'general.social.share' | t -%}
-          {%- assign share_url = shop.url | append: article.url -%}
-
-          <button class="button button--subdued button--lg w-full h-stack gap-3 align-center justify-center sm:hidden" is="share-button" style="--button-background: 0 0 0 / 0" share-url="{{ share_url | escape }}" share-title="{{ article.title | escape }}">
-            {%- render 'icon' with 'share', with: 18, height: 18 -%}
-            {{- 'general.social.share' | t -}}
-          </button>
-
-          <span class="bold sm-max:hidden">{{- share_label -}}</span>
-
-          <ul class="h-stack sm-max:hidden gap-3" role="list">
-            <li><a href="{% render 'share-link', host: 'facebook', title: article.title, url: article.url %}" class="share-buttons__item" aria-label="{{ 'general.social.share_on' | t: social_media: 'Facebook' }}">{%- render 'icon' with 'facebook', width: 24, height: 24 -%}</a></li>
-            <li><a href="{% render 'share-link', host: 'twitter', title: article.title, url: article.url %}" class="share-buttons__item" aria-label="{{ 'general.social.share_on' | t: social_media: 'Twitter' }}">{%- render 'icon' with 'twitter', width: 24, height: 24 -%}</a></li>
-            <li><a href="{% render 'share-link', host: 'pinterest', title: article.title, url: article.url %}" class="share-buttons__item" aria-label="{{ 'general.social.share_on' | t: social_media: 'Pinterest' }}">{%- render 'icon' with 'pinterest', width: 24, height: 24 -%}</a></li>
-            <li><a href="{% render 'share-link', host: 'email', title: article.title, url: article.url %}" class="share-buttons__item" aria-label="{{ 'general.social.share_email' | t }}">{%- render 'icon' with 'email' -%}</a></li>
-          </ul>
-        </div>
-      {%- endif -%}
+      <div class="article-sidebar-wrapper" style="display: flex; flex-direction: column; gap: 20px;">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'subscribe_box' and block.settings.position == 'sidebar' -%}
+            {%- render 'article-subscribe-box', block: block, position: 'sidebar' -%}
+          {%- endif -%}
+          {%- if block.type == 'deals_collaborations' -%}
+            {%- render 'article-deals-collaborations', block: block -%}
+          {%- endif -%}
+          {%- if block.type == 'featured_products' -%}
+            {%- render 'article-featured-products', block: block -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
 
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when 'navigation' -%}
-          {%- render 'article-navigation', show_date: section.settings.show_date, show_author: section.settings.show_author, show_comments_count: section.settings.show_comments_count, block_attributes: block.shopify_attributes -%}
+          {%- render 'article-navigation',
+                  show_date: section.settings.show_date,
+                  show_author: section.settings.show_author,
+                  show_comments_count: section.settings.show_comments_count,
+                  block_attributes: block.shopify_attributes
+          -%}
 
         {%- when 'comments' -%}
-          {%- render 'article-comments', show_gravatar: block.settings.show_gravatar, comments_pagination: block.settings.comments_per_page, block_attributes: block.shopify_attributes -%}
+          {%- render 'article-comments',
+                  show_gravatar: block.settings.show_gravatar,
+                  comments_pagination: block.settings.comments_per_page,
+                  block_attributes: block.shopify_attributes
+          -%}
         {%- when 'product_card' -%}
           {%- render 'article-product-card', block: block -%}
+        {%- when 'subscribe_box' -%}
+          {%- if block.settings.position == 'bottom' or block.settings.position == blank -%}
+            {%- render 'article-subscribe-box', block: block, position: 'bottom' -%}
+          {%- endif -%}
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -257,6 +343,136 @@
   ],
   "blocks": [
     {
+      "name": "Deals & Collaborations",
+      "type": "deals_collaborations",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Deals & Collaborations"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#1c1f24"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "Image 1"
+        },
+        {
+          "type": "url",
+          "id": "image_1_link",
+          "label": "Image 1 link"
+        },
+        {
+          "type": "header",
+          "content": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "url",
+          "id": "image_2_link",
+          "label": "Image 2 link"
+        }
+      ]
+    },
+    {
+      "name": "Featured Products",
+      "type": "featured_products",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Featured Products"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#1c1f24"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "card_background",
+          "label": "Product card background",
+          "default": "#2a2d35"
+        },
+        {
+          "type": "header",
+          "content": "Button Settings"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Learn More"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "Button background",
+          "default": "#00a2e4"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Button text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Products"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        }
+      ]
+    },
+    {
       "type": "navigation",
       "name": "Prev/next blog posts",
       "limit": 1
@@ -284,6 +500,61 @@
           "max": 50,
           "step": 5,
           "default": 5
+        }
+      ]
+    },
+    {
+      "name": "Table of Contents",
+      "type": "table_of_contents",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Table of Contents"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#5d5d60"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "link_color",
+          "label": "Link color",
+          "default": "#a0a0a0"
+        },
+        {
+          "type": "color",
+          "id": "active_color",
+          "label": "Active link color",
+          "default": "#00a2e4"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Border radius",
+          "min": 0,
+          "max": 20,
+          "step": 2,
+          "default": 8
+        },
+        {
+          "type": "range",
+          "id": "scroll_offset",
+          "label": "Scroll offset (px)",
+          "min": 50,
+          "max": 200,
+          "step": 10,
+          "default": 100
         }
       ]
     },
@@ -365,6 +636,65 @@
           "id": "button_text",
           "label": "Button text",
           "default": "Learn More"
+        }
+      ]
+    },
+    {
+      "name": "Subscribe Box",
+      "type": "subscribe_box",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            {
+              "label": "Right sidebar (sticky)",
+              "value": "sidebar"
+            },
+            {
+              "label": "Bottom of article",
+              "value": "bottom"
+            }
+          ],
+          "default": "bottom"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Subscribe to receive new customer discounts, promotional offers, and resources, which will be delivered directly to your inbox."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Subscribe Now"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#5d5d60"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_background",
+          "label": "Button background",
+          "default": "#00a2e4"
+        },
+        {
+          "type": "color",
+          "id": "button_hover_background",
+          "label": "Button hover background",
+          "default": "#0088c4"
         }
       ]
     }

@@ -1,0 +1,222 @@
+<div
+  class="article-subscribe-box article-subscribe-box--{{ position }}"
+  id="subscribe-box-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <style>
+    /* Sidebar position styles */
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar {
+      width: 270px;
+      flex-shrink: 0;
+      padding-top: 60px;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-wrapper {
+      position: sticky;
+      top: calc(var(--header-height, 80px) + 20px);
+      background: {{ block.settings.background_color | default: '#5d5d60' }};
+      border-radius: 12px;
+      padding: 24px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      max-height: calc(100vh - var(--header-height, 80px) - 40px);
+      overflow-y: auto;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-header {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-description {
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+      opacity: 0.85;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-input {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar .subscribe-button {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 13px;
+    }
+
+    /* Bottom position styles */
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom {
+      margin: 40px 0;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-wrapper {
+      background: {{ block.settings.background_color | default: '#5d5d60' }};
+      border-radius: 12px;
+      padding: 32px 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-header {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-description {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+      opacity: 0.85;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-form {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 14px 18px;
+      font-size: 14px;
+    }
+
+    #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-button {
+      padding: 14px 32px;
+      font-size: 14px;
+    }
+
+    /* Common styles */
+    #subscribe-box-{{ block.id }} .subscribe-input {
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: {{ block.settings.text_color | default: '#ffffff' }};
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-input:focus {
+      border-color: {{ block.settings.button_background | default: '#00a2e4' }};
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-button {
+      border-radius: 8px;
+      background: {{ block.settings.button_background | default: '#00a2e4' }};
+      color: #ffffff;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-button:hover {
+      background: {{ block.settings.button_hover_background | default: '#0088c4' }};
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 162, 228, 0.3);
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-button:active {
+      transform: translateY(0);
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-message {
+      margin-top: 12px;
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 6px;
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+
+    #subscribe-box-{{ block.id }} .subscribe-message.error {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    /* Responsive - hide sidebar on small screens */
+    @media screen and (max-width: 1150px) {
+      #subscribe-box-{{ block.id }}.article-subscribe-box--sidebar {
+        display: none;
+      }
+    }
+
+    /* Bottom position mobile styles */
+    @media screen and (max-width: 600px) {
+      #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-form {
+        flex-direction: column;
+      }
+
+      #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-input {
+        width: 100%;
+      }
+
+      #subscribe-box-{{ block.id }}.article-subscribe-box--bottom .subscribe-button {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="subscribe-wrapper">
+    <div class="subscribe-header">Be the First to Know</div>
+
+    <div class="subscribe-description">
+      {{
+        block.settings.description
+        | default: 'Subscribe to receive new customer discounts, promotional offers, and resources, which will be delivered directly to your inbox.'
+      }}
+    </div>
+
+    {%- assign newsletter_id = 'article-newsletter-' | append: block.id -%}
+    {%- form 'customer', id: newsletter_id, class: 'subscribe-form' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="subscribe-message">You have been subscribed to our newsletter.</div>
+      {%- else -%}
+        {%- if form.errors -%}
+          <div class="subscribe-message error">
+            {{ form.errors.translated_fields.email }}
+            {{ form.errors.messages.email }}
+          </div>
+        {%- endif -%}
+
+        <input type="hidden" name="contact[tags]" value="newsletter">
+
+        <input
+          type="email"
+          class="subscribe-input"
+          name="contact[email]"
+          placeholder="Email"
+          required
+          autocomplete="email"
+          value="{{ form.email }}"
+        >
+        <button type="submit" class="subscribe-button">
+          {{ block.settings.button_text | default: 'Subscribe Now' }}
+        </button>
+      {%- endif -%}
+    {%- endform -%}
+  </div>
+</div>
