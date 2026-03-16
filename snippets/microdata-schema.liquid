@@ -1,32 +1,152 @@
 {%- comment -%}
-This snippet structures the micro-data using JSON-LD specification. Starting from Impact 6, we are using
-the structured_data built-in filter to ensure that Shopify can keep it up to date without requiring theme upgrade. If
-you believe some information for products are missing, please reach Shopify support directly, as it is no longer
-managed at the theme level.
+  This snippet structures the micro-data using JSON-LD specification.
 {%- endcomment -%}
 
 {%- if request.page_type == 'product' -%}
-  <script type="application/ld+json">
-    {{- product | structured_data -}}
-  </script>
+    {%- assign ryviu = product.metafields.ryviu -%}
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org/",
+          "@type": "Product",
+          "name": {{ product.title | json }},
+      "image": [
+        {%- for media in product.media -%}
+            {{ media | image_url: width: 1920 | prepend: "https:" | json }}{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+        ],
+        "description": {{ product.description | strip_html | json }},
+      "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      "mpn": {{ product.selected_or_first_available_variant.sku | json }},
+      "brand": {
+        "@type": "Brand",
+        "name": {{ product.vendor | json }}
+        },
+        "url": {{ request.origin | append: product.url | json }},
+    {%- if ryviu -%}
+    {%- assign rating_info = ryviu.product_reviews_info | split: ";" -%}
+    {%- assign r_avg = rating_info[1] | plus: 0 -%}
+    {%- assign r_count = rating_info[0] | plus: 0 -%}
+    {%- if r_count > 0 -%}
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ r_avg }}",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "{{ r_count }}"
+          },
+        {%- endif -%}
+        {%- endif -%}
+      {%- if ryviu and ryviu.reviews -%}
+    {%- assign reviews_data = ryviu.reviews | split: "|||" -%}
+    {%- if reviews_data.size > 0 and reviews_data.first != blank -%}
+          "review": [
+            {%- for review_item in reviews_data limit: 5 -%}
+        {%- assign review_parts = review_item | split: ";;;" -%}
+        {%- if review_parts.size >= 3 -%}
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": {{ review_parts[0] | json }}
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": {{ review_parts[1] | json }},
+                    "bestRating": "5"
+                  },
+                  "reviewBody": {{ review_parts[2] | json }}
+                }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endif -%}
+    {%- endfor -%}
+          ],
+        {%- endif -%}
+        {%- endif -%}
+        "offers": [
+        {%- for variant in product.variants -%}
+          {
+            "@type": "Offer",
+            "name": {{ variant.title | json }},
+            "sku": {{ variant.sku | json }},
+            "url": {{ request.origin | append: variant.url | json }},
+            "availability": "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "itemCondition": "http://schema.org/NewCondition",
+            "price": {{ variant.price | divided_by: 100.00 | json }},
+            "priceCurrency": {{ cart.currency.iso_code | json }},
+            "seller": {
+              "@type": "Organization",
+              "name": "Ultenic"
+            }
+            {%- if variant.compare_at_price and variant.compare_at_price > variant.price -%}
+              ,"discount": {{ variant.compare_at_price | minus: variant.price | divided_by: 100.00 | json }}
+        {%- endif -%}
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+        ]
+      }
+    </script>
 {%- elsif request.page_type == 'article' -%}
-  <script type="application/ld+json">
-    {{- article | structured_data -}}
-  </script>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": {{ request.origin | append: article.url | json }}
+        },
+        "headline": {{ article.title | json }},
+      "description": {{ article.excerpt_or_content | strip_html | truncatewords: 30 | json }},
+        {%- if article.image -%}
+        "image": [
+          {{ article.image | image_url: width: 1920 | prepend: "https:" | json }}
+        ],
+      {%- endif -%}
+        "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+      "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+      "author": {
+        "@type": "Person",
+        "name": {{ article.author | json }}
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ultenic"
+        },
+        "articleSection": {{ blog.title | json }},
+      "wordCount": {{ article.content | strip_html | split: ' ' | size | json }}
+      {%- if article.tags.size > 0 -%}
+        ,"keywords": {{ article.tags | join: ', ' | json }}
+        {%- endif -%}
+        }
+    </script>
 {%- endif -%}
 
+{%- comment -%} Organization Schema (Global) {%- endcomment -%}
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": {{ 'general.home' | t | json }},
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Ultenic",
+      "url": {{ canonical_url | json }},
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@ultenic.com",
+      "contactType": "customer support"
+    }
+  }
+</script>
+
+{%- comment -%} Breadcrumb Schema {%- endcomment -%}
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ 'general.home' | t | json }},
         "item": "{{ shop.url }}"
       }
 
-      {%- if request.page_type == 'product' -%}
+    {%- if request.page_type == 'product' -%}
         {%- if collection -%}
           ,{
             "@type": "ListItem",
@@ -47,7 +167,7 @@ managed at the theme level.
             "item": "{{ shop.url }}{{ product.url }}"
           }
         {%- endif -%}
-      {%- elsif request.page_type == 'collection' -%}
+    {%- elsif request.page_type == 'collection' -%}
           ,{
             "@type": "ListItem",
             "position": 2,
@@ -86,43 +206,22 @@ managed at the theme level.
 </script>
 
 {%- if request.page_type == 'index' -%}
-  {%- assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" -%}
+    {%- assign potential_action_target = request.origin
+            | append: routes.search_url
+            | append: '?q={search_term_string}'
+    -%}
 
-  <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": {{ shop.name | json }},
-      "url": {{ shop.url | append: page.url | json }},
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": {{ shop.name | json }},
+      "url": {{ shop.url | json }},
       "potentialAction": {
         "@type": "SearchAction",
         "target": {{ potential_action_target | json }},
         "query-input": "required name=search_term_string"
       }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": {{ shop.name | json }},
-      {%- if shop.brand.logo -%}
-        "logo": {{ shop.brand.logo | image_url: width: shop.brand.logo.width | prepend: "https:" | json }},
-      {%- endif -%}
-      {%- if shop.brand.short_description -%}
-        "description": {{ shop.brand.short_description | json }},
-      {%- endif -%}
-      {%- if shop.brand.slogan -%}
-        "slogan": {{ shop.brand.slogan | json }},
-      {%- endif -%}
-      {%- if shop.brand.metafields.social_links.size > 0 -%}
-        "sameAs": [
-          {%- for social_link in shop.brand.metafields.social_links -%}
-            {{- social_link.last.value | json -}}{%- unless forloop.last -%},{%- endunless -%}
-          {%- endfor -%}
-        ],
-      {%- endif -%}
-      "url": {{ shop.url | append: page.url | json }}
     }
-  ]
-  </script>
+    </script>
 {%- endif -%}
