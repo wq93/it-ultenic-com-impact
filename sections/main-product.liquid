@@ -108,6 +108,69 @@ quick buy information in a template, that will be extracted in JS, but ensure it
 
 {%- render 'product-quick-buy', product: product -%}
 
+{%- comment -%}
+===================================
+🔍 AI 可见度优化：Schema.org JSON-LD
+自动为所有产品生成结构化数据
+数据来源：产品基础信息 + Metafields
+===================================
+{%- endcomment -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ product.title | escape }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "Ultenic"
+  },
+  "description": "{{ product.description | strip_html | strip_newlines | truncate: 250 | escape }}",
+  {%- if product.featured_image -%}
+  "image": [
+    "{{ product.featured_image | img_url: 'grande' | prepend: 'https:' }}"
+    {%- for image in product.images limit: 5 -%}
+      {%- unless image == product.featured_image -%}
+      ,"{{ image | img_url: 'grande' | prepend: 'https:' }}"
+      {%- endunless -%}
+    {%- endfor -%}
+  ],
+  {%- endif -%}
+  {%- if product.selected_or_first_available_variant.sku != blank -%}
+  "sku": "{{ product.selected_or_first_available_variant.sku }}",
+  {%- endif -%}
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ shop.url }}{{ product.url }}",
+    "priceCurrency": "{{ cart.currency.iso_code | default: 'EUR' }}",
+    "price": "{{ product.selected_or_first_available_variant.price | divided_by: 100.0 }}",
+    {%- if product.selected_or_first_available_variant.compare_at_price -%}
+    "priceValidUntil": "{{ 'now' | date: '%s' | plus: 31536000 | date: '%Y-%m-%d' }}",
+    {%- endif -%}
+    "availability": "{% if product.available %}https://schema.org/InStock{% else %}https://schema.org/OutOfStock{% endif %}",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@type": "Organization",
+      "name": "{{ shop.name | escape }}"
+    }
+  }
+  {%- if product.metafields.custom.rating_value and product.metafields.custom.review_count -%}
+  ,
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ product.metafields.custom.rating_value }}",
+    "reviewCount": "{{ product.metafields.custom.review_count }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+  {%- endif -%}
+  {%- if product.metafields.custom.tech_specs -%}
+  ,
+  "additionalProperty": {{ product.metafields.custom.tech_specs }}
+  {%- endif -%}
+}
+</script>
+
 {% schema %}
 {
   "name": "Product page",
@@ -589,7 +652,6 @@ quick buy information in a template, that will be extracted in JS, but ensure it
     {
       "type": "product_variations",
       "name": "Product variations",
-      "limit": 1,
       "settings": [
         {
           "type": "paragraph",
@@ -680,18 +742,20 @@ quick buy information in a template, that will be extracted in JS, but ensure it
         {
           "type": "header",
           "content": "Text",
-          "info": "Only applicable for line item property of type Text."
+          "visible_if": "{{ block.settings.type == 'text' }}"
         },
         {
           "type": "checkbox",
           "id": "allow_long_text",
           "label": "Allow long text",
-          "default": false
+          "default": false,
+          "visible_if": "{{ block.settings.type == 'text' }}"
         },
         {
           "type": "number",
           "id": "max_length",
-          "label": "Maximum number of characters"
+          "label": "Maximum number of characters",
+          "visible_if": "{{ block.settings.type == 'text' }}"
         }
       ]
     },
@@ -1786,7 +1850,8 @@ quick buy information in a template, that will be extracted in JS, but ensure it
       "max": 4,
       "step": 0.5,
       "label": "Max zoom level",
-      "default": 3
+      "default": 3,
+      "visible_if": "{{ section.settings.enable_image_zoom }}"
     },
     {
       "type": "header",

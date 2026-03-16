@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "page": "Side {{ page }}",
@@ -78,6 +87,7 @@
       "sold_out_button": "Utsolgt",
       "unavailable_button": "Utilgjengelig",
       "added_to_cart": "Lagt til i handlekurv!",
+      "added_to_cart_with_title": "{{ product_title }} er lagt i handlekurven.",
       "sold_out_badge": "Utsolgt",
       "on_sale_badge": "På salg",
       "discount_badge_html": "Spar {{ savings }}",
@@ -351,6 +361,10 @@
       "one_result": "Det er en fraktpris til din adresse:",
       "multiple_results": "Det er flere fraktpriser til din adresse:",
       "error": "Én eller flere feil oppstod under innhenting av fraktpriser:"
+    },
+    "discount": {
+      "label": "Rabattkode",
+      "error": "Skriv inn en gyldig rabattkode"
     }
   },
   "404": {
@@ -367,7 +381,7 @@
       "products": "Produkter",
       "suggestions": "Forslag",
       "collections": "Samlinger",
-      "posts": "Blogginnlegg",
+      "articles": "Blogginnlegg",
       "pages": "Sider",
       "clear": "Fjern",
       "view_all": "Vis alle",

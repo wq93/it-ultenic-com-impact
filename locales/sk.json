@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "page": "Strana {{ page }}",
@@ -78,6 +87,7 @@
       "sold_out_button": "Vypredané",
       "unavailable_button": "Nedostupné",
       "added_to_cart": "Pridané do košíka!",
+      "added_to_cart_with_title": "{{ product_title }} bol pridaný do košíka.",
       "sold_out_badge": "Vypredané",
       "on_sale_badge": "Výpredaj",
       "discount_badge_html": "Ušetríte {{ savings }}",
@@ -363,6 +373,10 @@
       "one_result": "Pre vašu adresu platí jedna sadzba za dopravu:",
       "multiple_results": "Pre vašu adresu existuje niekoľko sadzieb prepravy:",
       "error": "Pri načítavaní prepravných sadzieb došlo k jednej alebo viacerým chybám:"
+    },
+    "discount": {
+      "label": "Zľavový kód",
+      "error": "Zadajte platný zľavový kód"
     }
   },
   "404": {
@@ -379,7 +393,7 @@
       "products": "Produkty",
       "suggestions": "Návrhy",
       "collections": "Kolekcie",
-      "posts": "Príspevky na blogu",
+      "articles": "Príspevky na blogu",
       "pages": "Stránky",
       "clear": "Vymazať",
       "view_all": "Zobraziť všetko",

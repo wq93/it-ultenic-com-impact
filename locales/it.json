@@ -102,6 +102,10 @@
       "one_result": "1 opzione spedizione disponibile per il tuo indirizzo:",
       "multiple_results": "Multiple opzioni spedizione disponibili per il tuo indirizzo:",
       "error": "C'è stato un errore nel calcolo delle opzioni spedizione:"
+    },
+    "discount": {
+      "label": "Codice sconto",
+      "error": "Inserisci un codice sconto valido"
     }
   },
   "collection": {
@@ -404,6 +408,7 @@
       "sold_out_button": "Esaurito",
       "unavailable_button": "Non disponibile",
       "added_to_cart": "Prodotto aggiunto !",
+      "added_to_cart_with_title": "{{ product_title }} è stato aggiunto al carrello.",
       "sold_out_badge": "Esaurito",
       "on_sale_badge": "In sconto",
       "discount_badge_html": "Risparmia {{ savings }}",
@@ -473,7 +478,7 @@
       "products": "Prodotti",
       "suggestions": "Suggerimenti",
       "collections": "Collezioni",
-      "posts": "Articoli del blog",
+      "articles": "Articoli del blog",
       "pages": "Pagine",
       "clear": "Cancella",
       "view_all": "Vedi tutto",

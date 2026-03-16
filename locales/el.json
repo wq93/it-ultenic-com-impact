@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "page": "Σελίδα {{ page }}",
@@ -78,6 +87,7 @@
       "sold_out_button": "Εξαντλήθηκε",
       "unavailable_button": "Μη διαθέσιμο",
       "added_to_cart": "Προστέθηκε στο καλάθι σας!",
+      "added_to_cart_with_title": "Το {{ product_title }} προστέθηκε στο καλάθι.",
       "sold_out_badge": "Εξαντλήθηκε",
       "on_sale_badge": "Σε προσφορά",
       "discount_badge_html": "Εξοικονομήστε {{ savings }}",
@@ -351,6 +361,10 @@
       "one_result": "Υπάρχει μία χρέωση αποστολής για τη διεύθυνσή σας:",
       "multiple_results": "Υπάρχουν διάφορες χρεώσεις αποστολής για τη διεύθυνσή σας:",
       "error": "Παρουσιάστηκαν ένα ή περισσότερα σφάλματα κατά την ανάκτηση των χρεώσεων αποστολής:"
+    },
+    "discount": {
+      "label": "Κωδικός έκπτωσης",
+      "error": "Εισαγάγετε έναν έγκυρο κωδικό έκπτωσης"
     }
   },
   "404": {
@@ -367,7 +381,7 @@
       "products": "Προϊόντα",
       "suggestions": "Προτάσεις",
       "collections": "Συλλογές",
-      "posts": "Δημοσιεύσεις ιστολογίου",
+      "articles": "Δημοσιεύσεις ιστολογίου",
       "pages": "Σελίδες",
       "clear": "Εκκαθάριση",
       "view_all": "Προβολή όλων",

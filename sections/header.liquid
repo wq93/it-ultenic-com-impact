@@ -161,7 +161,7 @@ the underlying logic of the menu.
                                     <details class="relative" is="dropdown-disclosure" trigger="{{ section.settings.menu_open_trigger | escape }}">
                                       <summary class="dropdown-menu__item group" {% if sub_link.url != '#' %}data-url="{{ sub_link.url | escape }}"{% endif %}>
                                         <span><span class="reversed-link">{{- sub_link.title -}}</span></span>
-                                        {%- render 'icon' with 'chevron-right' -%}
+                                        {%- render 'icon' with 'chevron-right', direction_aware: true -%}
                                       </summary>
 
                                       <div class="dropdown-menu">
@@ -203,7 +203,8 @@ the underlying logic of the menu.
           {%- capture sizes -%}{{ section.settings.logo_max_width }}px{%- endcapture -%}
           {%- capture widths -%}{{ section.settings.logo_max_width | times: 2 | at_most: section.settings.logo.width }}, {{ section.settings.logo_max_width | times: 3 | at_most: section.settings.logo.width }}{%- endcapture -%}
           <span class="sr-only">{{ shop.name }}</span>
-          {{- section.settings.logo | image_url: width: section.settings.logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image' -}}
+          {%- assign alt_text = section.settings.logo.alt | default: shop.name -%}
+          {{- section.settings.logo | image_url: width: section.settings.logo.width | image_tag: sizes: sizes, alt: alt_text, widths: widths, class: 'header__logo-image' -}}
 
           {%- if section.settings.transparent_logo -%}
             {{- section.settings.transparent_logo | image_url: width: section.settings.transparent_logo.width | image_tag: sizes: sizes, widths: widths, class: 'header__logo-image header__logo-image--transparent' -}}
@@ -228,7 +229,7 @@ the underlying logic of the menu.
       {%- endcomment -%}
 
       <div class="header__secondary-nav">
-        {%- if section.settings.header != 'drawer' and section.settings.secondary_menu.links.size > 0 -%}
+        {%- if section.settings.layout != 'drawer' and section.settings.secondary_menu.links.size > 0 -%}
           <nav class="header__link-list" role="navigation">
             <ul class="contents">
               {%- for link in section.settings.secondary_menu.links -%}
@@ -493,13 +494,15 @@ the underlying logic of the menu.
       "type": "checkbox",
       "id": "show_country_flag",
       "label": "Show country flag",
-      "default": true
+      "default": true,
+      "visible_if": "{{ section.settings.show_country_selector }}"
     },
     {
       "type": "checkbox",
       "id": "show_country_name",
       "label": "Show country name",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.show_country_selector }}"
     },
     {
       "type": "header",
@@ -546,7 +549,8 @@ the underlying logic of the menu.
       "step": 2,
       "unit": "px",
       "label": "Background blur radius",
-      "default": 4
+      "default": 4,
+      "visible_if": "{{ section.settings.background_opacity < 100 }}"
     }
   ],
   "blocks": [

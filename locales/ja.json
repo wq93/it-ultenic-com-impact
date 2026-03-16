@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "page": "ページ {{ page }}",
@@ -78,6 +87,7 @@
       "sold_out_button": "売り切れ",
       "unavailable_button": "選択不可能",
       "added_to_cart": "カートに追加されました！",
+      "added_to_cart_with_title": "{{ product_title }} がカートに追加されました。",
       "sold_out_badge": "売り切れ",
       "on_sale_badge": "セール",
       "discount_badge_html": "{{ savings }}オフ",
@@ -350,6 +360,10 @@
       "one_result": "お客様のご住所には1つの配送料金が適用されます:",
       "multiple_results": "お客様のご住所に合わせて、複数の配送料金が選択できます:",
       "error": "配送料金の取得中に1つ以上のエラーが発生しました:"
+    },
+    "discount": {
+      "label": "割引コード",
+      "error": "有効な割引コードを入力してください"
     }
   },
   "404": {
@@ -366,7 +380,7 @@
       "products": "商品",
       "suggestions": "候補",
       "collections": "コレクション",
-      "posts": "ブログ",
+      "articles": "ブログ",
       "pages": "ページ",
       "clear": "リゼット",
       "view_all": "全てを表示",

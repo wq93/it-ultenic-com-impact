@@ -35,20 +35,28 @@
             "text": "ISCRIVITI PER OTTENERE €10 DI SCONTO | SOLO PER NUOVI UTENTI.",
             "url": ""
           }
+        },
+        "message_qfDKpV": {
+          "type": "message",
+          "settings": {
+            "text": "Durante le festività del Capodanno Cinese, i prodotti completi vengono spediti regolarmente, mentre alcuni accessori potrebbero subire ritardi nella spedizione.",
+            "url": ""
+          }
         }
       },
       "block_order": [
         "country_selector_8D4bTh",
         "message",
-        "message_jg8y6w"
+        "message_jg8y6w",
+        "message_qfDKpV"
       ],
       "settings": {
         "enable_sticky": false,
+        "navigation_mode": "scrolling",
         "autoplay": false,
         "cycle_speed": 6,
-        "text_size": "text-xs",
-        "navigation_mode": "scrolling",
         "scrolling_speed": 13,
+        "text_size": "text-xs",
         "background": "#1a1a1a",
         "background_gradient": "",
         "text_color": "#ffffff"

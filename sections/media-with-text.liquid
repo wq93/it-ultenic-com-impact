@@ -130,15 +130,26 @@ LIQUID
               {%- render 'icon' with block.settings.icon, width: block.settings.icon_width, height: block.settings.icon_width, class: 'media-with-text__icon' -%}
             {%- endif -%}
 
-            {%- if block.settings.subheading != blank -%}
-              <p class="subheading">{{ block.settings.subheading | escape }}</p>
-            {%- endif -%}
+           {%- if block.settings.subheading != blank -%}
+  {%- if template.name == 'product' -%}
+    <h3 class="subheading">{{ block.settings.subheading | escape }}</h3>
+  {%- else -%}
+    <h2 class="subheading">{{ block.settings.subheading | escape }}</h2>
+  {%- endif -%}
+{%- endif -%}
 
-            {%- if block.settings.title != blank -%}
-              <p class="h2">
-                {%- render 'styled-text', content: block.settings.title, gradient: block.settings.text_gradient -%}
-              </p>
-            {%- endif -%}
+
+{%- if block.settings.title != blank -%}
+  {%- if template.name == 'product' -%}
+    <h2 class="h2">
+      {%- render 'styled-text', content: block.settings.title, gradient: block.settings.text_gradient -%}
+    </h2>
+  {%- else -%}
+    <h1 class="h2">
+      {%- render 'styled-text', content: block.settings.title, gradient: block.settings.text_gradient -%}
+    </h1>
+  {%- endif -%}
+{%- endif -%}
 
             {{- block.settings.content -}}
 
@@ -166,8 +177,8 @@ LIQUID
       "type": "checkbox",
       "id": "full_width",
       "label": "Full width",
-      "info": "Only has effect when spacing is set to none.",
-      "default": false
+      "default": false,
+      "visible_if": "{{ section.settings.spacing == 'none' }}"
     },
     {
       "type": "checkbox",
@@ -651,7 +662,7 @@ LIQUID
           "type": "image_picker",
           "id": "poster_image",
           "label": "Poster image",
-          "info": "Only used when autoplay is disabled."
+          "visible_if": "{{ block.settings.autoplay == false }}"
         },
         {
           "type": "checkbox",
@@ -1083,6 +1094,7 @@ LIQUID
   "presets": [
     {
       "name": "Media with text",
+      "category": "Media",
       "blocks": [
         {
           "type": "image"

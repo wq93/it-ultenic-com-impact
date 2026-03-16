@@ -59,7 +59,7 @@ Supported variables
           <div class="fieldset">
             {%- liquid
               assign recipient_email_label = 'gift_card.recipient.email_label' | t
-              render 'input', type: 'email', label: recipient_email_label, name: 'properties[Recipient email]', value: form.email, required: true
+              render 'input', type: 'email', label: recipient_email_label, name: 'properties[Recipient email]', value: form.email, required: true, maxlength: 138
 
               assign recipient_name_label = 'gift_card.recipient.name_label' | t
               render 'input', label: recipient_name_label, name: 'properties[Recipient name]', value: form.name

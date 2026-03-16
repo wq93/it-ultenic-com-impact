@@ -1,1 +1,123 @@
-{"sections":{"main":{"type":"main-article","blocks":{"navigation":{"type":"navigation","settings":{}},"comments":{"type":"comments","settings":{}}},"block_order":["navigation","comments"],"settings":{}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "navigation": {
+          "type": "navigation",
+          "disabled": true,
+          "settings": {}
+        },
+        "comments": {
+          "type": "comments",
+          "disabled": true,
+          "settings": {
+            "show_gravatar": true,
+            "comments_per_page": 5
+          }
+        }
+      },
+      "block_order": [
+        "navigation",
+        "comments"
+      ],
+      "settings": {
+        "allow_transparent_header": false,
+        "layout": "content_first",
+        "show_author": true,
+        "show_date": true,
+        "show_comments_count": true,
+        "show_share_buttons": true,
+        "banner_background": "",
+        "banner_text_color": "",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "content_width": "750px"
+      }
+    },
+    "faq_nRLrpV": {
+      "type": "faq",
+      "blocks": {
+        "item_chTKtP": {
+          "type": "item",
+          "settings": {
+            "title": "L’U18 PowerPro è adatto a una casa grande con famiglia numerosa?",
+            "content": "<ul><li>Sì, grazie all’autonomia fino a 80 minuti in modalità Eco e alla struttura leggera e senza fili, l’U18 PowerPro è ideale per case ampie fino a circa 260 m² dove vivono più persone. Puoi pulire più stanze in una sola sessione, seguendo i ritmi della tua famiglia.</li></ul>"
+          }
+        },
+        "item_ER4Tw8": {
+          "type": "item",
+          "settings": {
+            "title": "È efficace con peli di animali e capelli lunghi?",
+            "content": "<ul><li>La spazzola TangleTame™ Floor Brush è pensata proprio per peli di cani e gatti e capelli lunghi: cattura lo sporco riducendo l’aggrovigliamento nella spazzola. Questo ti fa risparmiare tempo, soprattutto in famiglie numerose con animali domestici.</li></ul>"
+          }
+        },
+        "item_4xPCxb": {
+          "type": "item",
+          "settings": {
+            "title": "Come aiuta la GreenEye Technology™ le persone allergiche o asmatiche in casa?",
+            "content": "<ul><li>La GreenEye Technology™ utilizza una filtrazione avanzata a 6 stadi con filtro HEPA che cattura il 99,99% degli allergeni, tra cui polvere fine, pollini e acari. È una soluzione ideale per bambini, adulti e anziani che soffrono di allergie o asma, perché mantiene l’aria di casa più pulita durante le pulizie di primavera.</li></ul>"
+          }
+        },
+        "item_pwdBXf": {
+          "type": "item",
+          "settings": {
+            "title": "Posso usare l’U18 PowerPro per pulire sotto letti e divani senza spostarli?",
+            "content": "<ul><li>Sì, grazie alla Flexible Bendable Wand puoi raggiungere comodamente lo spazio sotto mobili bassi senza doverli spostare e senza piegarti troppo. È molto utile nelle case grandi e arredate dove è difficile cambiare posizione ai mobili pesanti.</li></ul>"
+          }
+        },
+        "item_tygDJE": {
+          "type": "item",
+          "settings": {
+            "title": "L’U18 PowerPro è comodo da usare anche per i nonni o chi non vuole sollevare pesi?",
+            "content": "<ul><li>L’U18 PowerPro è progettato per essere leggero e facile da manovrare. La struttura senza fili, il tubo flessibile e gli accessori intuitivi lo rendono adatto anche a chi preferisce evitare sforzi e movimenti complessi, come nonni o persone con mobilità ridotta.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "item_chTKtP",
+        "item_ER4Tw8",
+        "item_4xPCxb",
+        "item_pwdBXf",
+        "item_tygDJE"
+      ],
+      "disabled": true,
+      "name": "FAQ",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq_nRLrpV"
+  ]
+}

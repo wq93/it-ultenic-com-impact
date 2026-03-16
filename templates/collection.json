@@ -15,8 +15,8 @@
         "image_rpVjUT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/homepage_Banner_PC_219661d6-494c-4e1c-94e9-d200003b9fbb.png",
-            "mobile_image": "shopify://shop_images/homepage_Banner_App_3ac3e405-f9f7-4235-8197-7b0af09d896f.png",
+            "image": "shopify://shop_images/homepage_Banner_PC_c267c5ec-c467-461b-acea-75827a1a0c1c.jpg",
+            "mobile_image": "shopify://shop_images/homepage_Banner_App_4eb02efe-50f6-438f-9f45-dfee4fe81d0f.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -24,7 +24,7 @@
             "title": "",
             "heading_tag": "h0",
             "button_text": "",
-            "button_link": "shopify://pages/buon-san-valentino-2026",
+            "button_link": "shopify://pages/grande-saldi-di-primavera-2026",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",

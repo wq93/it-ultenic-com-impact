@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -6,8 +15,8 @@
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Banner_PC_dc9ba310-8a99-4eba-ba02-a7fd6aa37734.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/Banner_M.jpg",
+            "image": "shopify://shop_images/Banner_PC_dc9ba310-8a99-4eba-ba02-a7fd6aa37734.jpg",
+            "mobile_image": "shopify://shop_images/Banner_M.jpg",
             "content_max_width": 840,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
@@ -28,8 +37,8 @@
         "image_Fq8ejG": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/U16_Banner_PC.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/U16_Banner_M.jpg",
+            "image": "shopify://shop_images/U16_Banner_PC.jpg",
+            "mobile_image": "shopify://shop_images/U16_Banner_M.jpg",
             "content_max_width": 840,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
@@ -37,7 +46,7 @@
             "title": "Sottotitolo: Autonomia di 60 minuti",
             "heading_tag": "h2",
             "button_text": "Acquista U16 Flex",
-            "button_link": "shopify:\/\/products\/ultenic-u16-flex-aspirapolvere-senza-fili",
+            "button_link": "shopify://products/ultenic-u16-flex-aspirapolvere-senza-fili",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -50,8 +59,8 @@
         "image_FYkPar": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/U12Vesla_PC.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/T10_Lite_Banner_M.jpg",
+            "image": "shopify://shop_images/U12Vesla_PC.jpg",
+            "mobile_image": "shopify://shop_images/T10_Lite_Banner_M.jpg",
             "content_max_width": 600,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
@@ -59,7 +68,7 @@
             "title": "45,000PA Super Potenza",
             "heading_tag": "h2",
             "button_text": "Acquista U12 Vesla",
-            "button_link": "shopify:\/\/products\/ultenic-u12-vesla-aspirapolvere-senza-fili",
+            "button_link": "shopify://products/ultenic-u12-vesla-aspirapolvere-senza-fili",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -72,8 +81,8 @@
         "image_BATNdD": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/T10_Lite_Banner_PC.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/T10_Lite_Banner_M.jpg",
+            "image": "shopify://shop_images/T10_Lite_Banner_PC.jpg",
+            "mobile_image": "shopify://shop_images/T10_Lite_Banner_M.jpg",
             "content_max_width": 520,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
@@ -81,7 +90,7 @@
             "title": "5000Pa Forte potenza di aspirazione",
             "heading_tag": "h2",
             "button_text": "Acquista T10 Lite",
-            "button_link": "shopify:\/\/products\/ultenic-t10-lite-robot-aspirapolvere-lavapavimenti",
+            "button_link": "shopify://products/ultenic-t10-lite-robot-aspirapolvere-lavapavimenti",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -94,8 +103,8 @@
         "image_UATpwL": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/D10_Banner_PC.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/D10_Banner_M.jpg",
+            "image": "shopify://shop_images/D10_Banner_PC.jpg",
+            "mobile_image": "shopify://shop_images/D10_Banner_M.jpg",
             "content_max_width": 580,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
@@ -103,7 +112,7 @@
             "title": "Una Pulizia Completa e Senza Intoppi.",
             "heading_tag": "h2",
             "button_text": "Acquista D10",
-            "button_link": "shopify:\/\/products\/ultenic-d10-robot-aspirapolvere-lavapavimenti",
+            "button_link": "shopify://products/ultenic-d10-robot-aspirapolvere-lavapavimenti",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -156,10 +165,10 @@
           "type": "collection",
           "settings": {
             "collection": "aspirapolvere-senza-fili",
-            "image": "shopify:\/\/shop_images\/1500_1000_adf8ec36-ed50-4359-873f-50ffbe980310.jpg",
+            "image": "shopify://shop_images/1500_1000_adf8ec36-ed50-4359-873f-50ffbe980310.jpg",
             "subheading": "",
             "title": ".",
-            "url": "shopify:\/\/collections\/aspirapolvere-senza-fili",
+            "url": "shopify://collections/aspirapolvere-senza-fili",
             "heading_tag": "h6",
             "text_position": "place-self-start text-start",
             "text_color": "#ffffff",
@@ -171,10 +180,10 @@
           "type": "collection",
           "settings": {
             "collection": "robot-aspirapolvere",
-            "image": "shopify:\/\/shop_images\/1500_1000_54863ba2-2af4-46bd-8643-4a6a2f92174d.jpg",
+            "image": "shopify://shop_images/1500_1000_54863ba2-2af4-46bd-8643-4a6a2f92174d.jpg",
             "subheading": "",
             "title": ".",
-            "url": "shopify:\/\/collections\/robot-aspirapolvere",
+            "url": "shopify://collections/robot-aspirapolvere",
             "heading_tag": "h6",
             "text_position": "place-self-start text-start",
             "text_color": "#ffffff",
@@ -249,7 +258,7 @@
             "vertical_position_mobile": 50,
             "icon_width": 32,
             "title": "T10 Lite: Pulisci Meno, Vivi di Più",
-            "content": "<p><strong>AUTO-SVUOTAMENTO<\/strong><\/p><p>Aria Pulita, Mani Pulite, Casa Pulita<\/p><p>Cattura e intrappola il 99,99% della polvere e dei detriti con una base auto-svuotante con filtro HEPA vero e un sistema di sigillatura anti-inquinamento completo.<\/p>"
+            "content": "<p><strong>AUTO-SVUOTAMENTO</strong></p><p>Aria Pulita, Mani Pulite, Casa Pulita</p><p>Cattura e intrappola il 99,99% della polvere e dei detriti con una base auto-svuotante con filtro HEPA vero e un sistema di sigillatura anti-inquinamento completo.</p>"
           }
         },
         "item_RmLpeD": {
@@ -261,7 +270,7 @@
             "vertical_position_mobile": 65,
             "icon_width": 32,
             "title": "U16 Flex: L'Arte della Potenza e della Flessibilità",
-            "content": "<p><strong>550W di Alta Potenza e 45KPa di Forte Aspirazione<\/strong><\/p><p>Affronta senza sforzo polvere, detriti e peli di animali; il nostro aspirapolvere dice addio ai disordini più difficili.<\/p>"
+            "content": "<p><strong>550W di Alta Potenza e 45KPa di Forte Aspirazione</strong></p><p>Affronta senza sforzo polvere, detriti e peli di animali; il nostro aspirapolvere dice addio ai disordini più difficili.</p>"
           }
         },
         "item_JMFtCA": {
@@ -273,7 +282,7 @@
             "vertical_position_mobile": 75,
             "icon_width": 32,
             "title": "D10: Scatena la Massima Pulizia",
-            "content": "<p><strong>Configuralo e Dimenticalo<\/strong><\/p><p>Imposta il tuo programma di pulizia e lascialo fare il resto. Goditi una casa impeccabile senza muovere un dito, grazie alla sua comoda funzione di programmazione.<\/p>"
+            "content": "<p><strong>Configuralo e Dimenticalo</strong></p><p>Imposta il tuo programma di pulizia e lascialo fare il resto. Goditi una casa impeccabile senza muovere un dito, grazie alla sua comoda funzione di programmazione.</p>"
           }
         },
         "item_9TJnqD": {
@@ -285,7 +294,7 @@
             "vertical_position_mobile": 24,
             "icon_width": 32,
             "title": "ECOSISTEMA DI CASA INTELLIGENTE",
-            "content": "<p><strong>WIDGET PERSONALIZZATO<\/strong><\/p><p>Controllo Più Veloce e Facile<\/p><p>Aggiungi semplicemente la tua app Ultenic sul tuo telefono per un controllo rapido e facile.<\/p>"
+            "content": "<p><strong>WIDGET PERSONALIZZATO</strong></p><p>Controllo Più Veloce e Facile</p><p>Aggiungi semplicemente la tua app Ultenic sul tuo telefono per un controllo rapido e facile.</p>"
           }
         }
       },
@@ -297,8 +306,8 @@
       ],
       "settings": {
         "full_width": true,
-        "image": "shopify:\/\/shop_images\/Hot_spots_PC_2500_800.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/Hot_spots_M.jpg",
+        "image": "shopify://shop_images/Hot_spots_PC_2500_800.jpg",
+        "mobile_image": "shopify://shop_images/Hot_spots_M.jpg",
         "title": "",
         "content": "",
         "button_text": "",
@@ -325,10 +334,10 @@
         "item-1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/T10.webp",
+            "image": "shopify://shop_images/T10.webp",
             "title": "",
             "heading_tag": "h4",
-            "link_url": "https:\/\/www.instagram.com\/p\/CdDzZK6sULO\/",
+            "link_url": "https://www.instagram.com/p/CdDzZK6sULO/",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 2,
@@ -347,10 +356,10 @@
         "item-2": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/screenshot_2024-12-11_12-29-53.png",
+            "image": "shopify://shop_images/screenshot_2024-12-11_12-29-53.png",
             "title": "",
             "heading_tag": "h4",
-            "link_url": "https:\/\/www.instagram.com\/p\/CcRJqdpJfOl\/",
+            "link_url": "https://www.instagram.com/p/CcRJqdpJfOl/",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
@@ -369,10 +378,10 @@
         "item-3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/2024-12-11_123042.png",
+            "image": "shopify://shop_images/2024-12-11_123042.png",
             "title": "",
             "heading_tag": "h4",
-            "link_url": "https:\/\/www.instagram.com\/p\/CTmggDqFzjg\/",
+            "link_url": "https://www.instagram.com/p/CTmggDqFzjg/",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 1,
@@ -391,10 +400,10 @@
         "29246d34-c6e0-4373-84f6-b15e57736a00": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SaveVid.Net_305771247_138965558839246_4963372470664171320_n_5a3d25c1-37e5-4741-b496-7bc5e4255f0f.jpg",
+            "image": "shopify://shop_images/SaveVid.Net_305771247_138965558839246_4963372470664171320_n_5a3d25c1-37e5-4741-b496-7bc5e4255f0f.jpg",
             "title": "",
             "heading_tag": "h4",
-            "link_url": "https:\/\/www.instagram.com\/p\/CiQXmStIW8Q\/?img_index=2",
+            "link_url": "https://www.instagram.com/p/CiQXmStIW8Q/?img_index=2",
             "link_text": "",
             "mobile_text_position": "place-self-center text-center",
             "desktop_column_span": 2,
@@ -429,8 +438,8 @@
     "revealed_image_on_scroll_NErzcg": {
       "type": "revealed-image-on-scroll",
       "settings": {
-        "image": "shopify:\/\/shop_images\/PC_021ed3dc-082d-4ecc-a73c-8d932729a560.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/M.jpg",
+        "image": "shopify://shop_images/PC_021ed3dc-082d-4ecc-a73c-8d932729a560.jpg",
+        "mobile_image": "shopify://shop_images/M.jpg",
         "subheading": "",
         "title": "COME HOME TO THE FUTURE",
         "background": "",
