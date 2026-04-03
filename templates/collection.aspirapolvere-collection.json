@@ -86,11 +86,58 @@
         "show_filter_values_count": true,
         "open_first_filter_group": false
       }
+    },
+    "faq_NhfmMz": {
+      "type": "faq",
+      "blocks": {
+        "item_988RxN": {
+          "type": "item",
+          "settings": {
+            "title": "Ci sono così tanti modelli (U16, U16, U20, ecc.), come posso scegliere quello più adatto alle mie esigenze?",
+            "content": "<p>Se cerchi il miglior rapporto qualità-prezzo: scegli l'<strong>U16 Flex</strong>, leggero e perfetto per l'uso quotidiano su pavimenti duri.<br/><br/>Se ti piacciono i manici telescopici: scegli l'<strong>U15</strong>, progettato appositamente per chi preferisce la flessibilità dei manici telescopici e non ama quelli pieghevoli.<br/><br/>Se hai bisogno di pulire grandi superfici: scegli l'<strong>U18 PowerPro</strong>, con un'autonomia fino a 80 minuti.<br/><br/>Se cerchi un aspirapolvere versatile: scegli l'<strong>U20</strong>. Si distingue per la sua autonomia, il sistema anti-groviglio e la potenza di aspirazione.</p>"
+          }
+        },
+        "item_VE4LCk": {
+          "type": "item",
+          "settings": {
+            "title": "Quali garanzie offre l'acquisto sul sito web di Ultenic? Come viene gestito il servizio post-vendita?",
+            "content": "<p>Effettuando un ordine sul sito ufficiale, potrai usufruire di:<br/><br/><strong>Garanzia ufficiale: </strong>offriamo una garanzia di 2 anni e assistenza tecnica specializzata nel caso in cui dovessero insorgere problemi di qualità durante tale periodo.<br/><br/><strong>Resi e cambi senza complicazioni: </strong>approfitta di una politica di reso di 30 giorni in conformità con la legislazione locale. Il nostro team di assistenza clienti è sempre a tua disposizione per risolvere qualsiasi dubbio, dal montaggio alla manutenzione.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_988RxN",
+        "item_VE4LCk"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQs",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow_xzThcR",
     "banner",
-    "main"
+    "main",
+    "faq_NhfmMz"
   ]
 }

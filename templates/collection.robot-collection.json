@@ -86,11 +86,66 @@
         "show_filter_values_count": true,
         "open_first_filter_group": false
       }
+    },
+    "faq_pFtirQ": {
+      "type": "faq",
+      "blocks": {
+        "item_xE3LKf": {
+          "type": "item",
+          "settings": {
+            "title": "La funzione di svuotamento automatico è davvero necessaria?",
+            "content": "<p>Si consiglia di scegliere un modello dotato di sistema di raccolta della polvere. I normali robot aspirapolvere richiedono una pulizia manuale frequente del contenitore della polvere, mentre i modelli dotati di sistema di raccolta della polvere aspirano automaticamente i detriti in un sacchetto sigillato. Un sacchetto dura solitamente dai 60 ai 90 giorni, il che significa che non è necessario svuotarlo per un periodo fino a due mesi: una soluzione ideale per le famiglie indaffarate o per chi soffre di allergie alla polvere.</p>"
+          }
+        },
+        "item_4G6zRw": {
+          "type": "item",
+          "settings": {
+            "title": "Qual è la differenza tra la navigazione LiDAR e quella tradizionale?",
+            "content": "<p>I modelli di fascia alta di Ultenic utilizzano la tecnologia di navigazione laser LiDAR, in grado di eseguire una scansione a 360° e tracciare con precisione una mappa completa della casa. A differenza dei robot che si muovono in modo casuale, questo modello è in grado di riconoscere gli ostacoli e pianificare il percorso ottimale: non solo non urta contro i mobili, ma funziona con precisione anche in condizioni di oscurità e consente persino di impostare delle «zone vietate (No-go Zones)».</p>"
+          }
+        },
+        "item_C6n7jq": {
+          "type": "item",
+          "settings": {
+            "title": "Questi robot aspirapolvere possono aspirare e lavare i pavimenti contemporaneamente?",
+            "content": "<p>Sì. La maggior parte dei nostri modelli è dotata di un serbatoio 2 in 1 che consente di aspirare e lavare il pavimento contemporaneamente. Tramite l'app Ultenic è possibile regolare la quantità d'acqua (bassa, media, alta) in base al grado di sporco del pavimento, assicurando che il parquet rimanga leggermente umido e si asciughi rapidamente, mentre le piastrelle vengano pulite in profondità.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_xE3LKf",
+        "item_4G6zRw",
+        "item_C6n7jq"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQs",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow_xzThcR",
     "banner",
-    "main"
+    "main",
+    "faq_pFtirQ"
   ]
 }

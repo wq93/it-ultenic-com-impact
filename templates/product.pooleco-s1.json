@@ -190,6 +190,7 @@
       "disabled": true,
       "name": "Video",
       "settings": {
+        "navigation_name": "",
         "full_width": false,
         "allow_transparent_header": false,
         "autoplay": false,
@@ -603,6 +604,7 @@
       ],
       "name": "Slideshow",
       "settings": {
+        "navigation_name": "",
         "full_width": false,
         "allow_transparent_header": false,
         "show_initial_transition": false,
@@ -613,6 +615,60 @@
         "cycle_speed": 6,
         "background": "#f2f2f2",
         "background_gradient": ""
+      }
+    },
+    "faq_BMVQqB": {
+      "type": "faq",
+      "blocks": {
+        "item_q83Mki": {
+          "type": "item",
+          "settings": {
+            "title": "In cosa si differenzia PoolEco S1 dai normali robot aspirapolvere per piscine (come PoolEco 10)?",
+            "content": "<p>Sono una coppia perfetta. PoolEco S1 si occupa della pulizia della superficie dell'acqua, intercettando foglie, polline, insetti e residui oleosi prima che si depositino sul fondo della piscina. Il tradizionale robot aspiratore, invece, si occupa di pulire il fondo. L'uso di S1 alleggerisce notevolmente il carico sul sistema di filtraggio, mantenendo l'acqua sempre limpida.</p>"
+          }
+        },
+        "item_z8fN8z": {
+          "type": "item",
+          "settings": {
+            "title": "Se il tempo è nuvoloso o non c'è sole per diversi giorni di fila, funziona comunque?",
+            "content": "<p>Se si tratta di una piscina coperta o in caso di pioggia, è possibile ricaricare rapidamente il dispositivo tramite la porta di ricarica.</p>"
+          }
+        },
+        "item_V3Kbap": {
+          "type": "item",
+          "settings": {
+            "title": "Che dimensioni di detriti è in grado di trattare? Rischia di lasciar passare il polline più fine?",
+            "content": "<p>Il modello S1 è dotato di un cesto filtrante a maglia fitta di grande capienza. Non solo permette di raccogliere facilmente foglie, rami e insetti di grandi dimensioni, ma il suo design a maglia fitta è in grado di trattenere efficacemente anche la polvere e il polline presenti sulla superficie dell'acqua. È sufficiente estrarre periodicamente il cesto e sciacquarlo con acqua pulita.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_q83Mki",
+        "item_z8fN8z",
+        "item_V3Kbap"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQs",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
       }
     },
     "specification_table_3U8ke9": {
@@ -678,6 +734,7 @@
         "row_jgiKiD"
       ],
       "settings": {
+        "navigation_name": "",
         "full_width": true,
         "subheading": "",
         "title": "Specifiche prodotto",
@@ -706,6 +763,7 @@
         "item_G7gBTc": {
           "type": "item",
           "settings": {
+            "show_controls": false,
             "column_size": "3",
             "title": "Assistenza professionale",
             "heading_tag": "h4",
@@ -718,6 +776,7 @@
         "item_AVDFmH": {
           "type": "item",
           "settings": {
+            "show_controls": false,
             "column_size": "3",
             "title": "Caratteristica speciale",
             "heading_tag": "h4",
@@ -730,6 +789,7 @@
         "item_eJFxpk": {
           "type": "item",
           "settings": {
+            "show_controls": false,
             "column_size": "3",
             "title": "Manuale d'uso",
             "heading_tag": "h4",
@@ -762,6 +822,7 @@
       "type": "featured-collection",
       "disabled": true,
       "settings": {
+        "navigation_name": "",
         "collection": "accessori-u15",
         "products": [],
         "full_width": true,
@@ -804,7 +865,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },
@@ -830,6 +893,7 @@
     "media_with_text_RWzgWT",
     "media_with_text_aFjDh8",
     "slideshow_ckxWXa",
+    "faq_BMVQqB",
     "specification_table_3U8ke9",
     "multi_column_PrVy8x",
     "featured_collection_xfjwV6",

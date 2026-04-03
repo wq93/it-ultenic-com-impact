@@ -22,7 +22,11 @@ NOTE TO DEVELOPERS: welcome to Impact theme! We hope that you will enjoy editing
     {%- endif -%}
 
     <link rel="canonical" href="{{ canonical_url }}">
-
+{% if template contains 'article' and article and article.metafields.custom.schema_json %}
+  <script type="application/ld+json">
+    {{ article.metafields.custom.schema_json | strip }}
+  </script>
+{% endif %}
     {%- if settings.favicon -%}
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
       <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180 }}">

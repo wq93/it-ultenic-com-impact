@@ -14,7 +14,6 @@
       "blocks": {
         "image_rpVjUT": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/homepage_Banner_PC_c267c5ec-c467-461b-acea-75827a1a0c1c.jpg",
             "mobile_image": "shopify://shop_images/homepage_Banner_App_4eb02efe-50f6-438f-9f45-dfee4fe81d0f.jpg",
@@ -86,11 +85,66 @@
         "show_filter_values_count": true,
         "open_first_filter_group": false
       }
+    },
+    "faq_PFWbVe": {
+      "type": "faq",
+      "blocks": {
+        "item_nTdLBK": {
+          "type": "item",
+          "settings": {
+            "title": "Come posso sapere se questi accessori sono compatibili con il mio modello di aspirapolvere?",
+            "content": "<p>Si prega di verificare il nome del prodotto prima di effettuare l'acquisto. Se non è sicuro del modello in suo possesso, contatti il nostro servizio clienti: basta fornirci il numero d'ordine o una foto dell'apparecchio e la aiuteremo a trovare il prodotto giusto.</p>"
+          }
+        },
+        "item_w6LyEE": {
+          "type": "item",
+          "settings": {
+            "title": "Ogni quanto tempo bisogna sostituire il filtro HEPA? Si può lavare con acqua più volte?",
+            "content": "<p>Si consiglia di sostituire il filtro ogni 3-6 mesi. Anche se viene lavato spesso, la polvere fine finisce per ostruire gradualmente le fibre; pertanto, sostituirlo periodicamente protegge efficacemente il motore ed evita l'inquinamento secondario.</p>"
+          }
+        },
+        "item_aVNr4F": {
+          "type": "item",
+          "settings": {
+            "title": "Posso acquistare prodotti detergenti che non siano della Ultenic?",
+            "content": "<p>Vi preghiamo di acquistare le soluzioni detergenti Ultenic. Non potremo offrirvi la garanzia qualora la macchina subisca danni a causa dell'uso di soluzioni detergenti di altre marche.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_nTdLBK",
+        "item_w6LyEE",
+        "item_aVNr4F"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQs",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow_xzThcR",
     "banner",
-    "main"
+    "main",
+    "faq_PFWbVe"
   ]
 }

@@ -29,6 +29,12 @@ Supported parameters
         </p>
       {%- endif -%}
 
+      {%- if show_date and article.updated_at != article.published_at -%}
+        <p class="text-with-icon link-faded">
+          {%- render 'icon' with 'blog-date' -%} <time>Updated: {{- article.updated_at | date: format: 'abbreviated_date' -}}</time>
+        </p>
+      {%- endif -%}
+
       {%- if show_author -%}
         <p class="text-with-icon link-faded">
           {%- render 'icon' with 'blog-author' -%} {{- 'blog.post.written_by' | t: author: article.author -}}

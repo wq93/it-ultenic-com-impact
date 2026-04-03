@@ -14,6 +14,7 @@
       "blocks": {
         "image_dE3MHk": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/homepage_Banner_PC_c267c5ec-c467-461b-acea-75827a1a0c1c.jpg",
             "mobile_image": "shopify://shop_images/homepage_Banner_M_a066b548-e9c7-46c3-bacd-8ada1bbf7dc2.jpg",
@@ -57,18 +58,17 @@
       "blocks": {
         "image_3W3ggx": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/homepage_banner_PC_02a2740c-1c21-4511-9f9a-eaf4098b2b77.jpg",
-            "mobile_image": "shopify://shop_images/homepage_banner_M_f818482e-2ea1-426f-bc97-45712e744351.jpg",
+            "image": "shopify://shop_images/homepage_Banner_PC_392980c3-e756-4e88-9637-85b44a4ede2c.jpg",
+            "mobile_image": "shopify://shop_images/homepage_Banner_M_52599c93-56fc-439a-97f3-03b7bc394268.jpg",
             "content_max_width": 840,
-            "mobile_text_position": "place-self-start-center text-center",
-            "desktop_text_position": "sm:place-self-start-center sm:text-center",
-            "subheading": "",
-            "title": "",
+            "mobile_text_position": "place-self-start text-start",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "Pooleco 10 Series Pulitore Robotico per Piscina Senza Fili",
+            "title": "Automazione Intelligente",
             "heading_tag": "h2",
-            "button_text": "",
-            "button_link": "shopify://products/ultenic-pooleco-s1-skimmer-per-piscina-robotico-solare",
+            "button_text": "Acquista ora",
+            "button_link": "shopify://products/ultenic-pooleco-robot-pulisci-piscina-senza-fili",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -613,6 +613,41 @@
         "text_color_inside": "#ffffff",
         "text_color_outside": "#000000"
       }
+    },
+    "blog_posts_xrk83d": {
+      "type": "blog-posts",
+      "blocks": {
+        "blog_BkhpH8": {
+          "type": "blog",
+          "settings": {
+            "blog": "guida-all-acquisto",
+            "posts_count": 3,
+            "stack_items": false
+          }
+        }
+      },
+      "block_order": [
+        "blog_BkhpH8"
+      ],
+      "name": "Blog posts",
+      "settings": {
+        "full_width": true,
+        "show_excerpt": true,
+        "show_date": true,
+        "show_author": false,
+        "show_comments_count": false,
+        "show_category": true,
+        "subheading": "",
+        "title": "Blog posts",
+        "content": "",
+        "link_url": "",
+        "link_text": "View all",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
@@ -624,6 +659,7 @@
     "featured-collection",
     "hot-spots",
     "media-grid",
-    "revealed_image_on_scroll_NErzcg"
+    "revealed_image_on_scroll_NErzcg",
+    "blog_posts_xrk83d"
   ]
 }
