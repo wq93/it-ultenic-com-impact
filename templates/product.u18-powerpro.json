@@ -68,6 +68,7 @@
         },
         "text_UmETiW": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Prevendita, spedizione il 18 marzo.</p>"
           }

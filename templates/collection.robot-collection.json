@@ -14,10 +14,9 @@
       "blocks": {
         "image_rpVjUT": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/homepage_Banner_PC_c267c5ec-c467-461b-acea-75827a1a0c1c.jpg",
-            "mobile_image": "shopify://shop_images/homepage_Banner_App_4eb02efe-50f6-438f-9f45-dfee4fe81d0f.jpg",
+            "image": "shopify://shop_images/robot_vacuum_banner_PC.jpg",
+            "mobile_image": "shopify://shop_images/robot_vacuum_banner_M.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -25,7 +24,7 @@
             "title": "",
             "heading_tag": "h0",
             "button_text": "",
-            "button_link": "shopify://pages/grande-saldi-di-primavera-2026",
+            "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
