@@ -22,6 +22,12 @@
             "heading_tag": "h2"
           }
         },
+        "text_QHEgPg": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>L'aspirapolvere lavapavimenti senza fili </strong>intelligente con <strong>design reclinabile a 180°</strong> per pulire facilmente sotto i mobili bassi. <strong>Aspira e lava in una sola passata</strong>, offrendo una pulizia profonda e versatile per tutti i pavimenti duri.</p>"
+          }
+        },
         "badges": {
           "type": "badges",
           "settings": {}
@@ -89,6 +95,7 @@
       "block_order": [
         "vendor",
         "title",
+        "text_QHEgPg",
         "badges",
         "price",
         "rating",

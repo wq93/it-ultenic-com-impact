@@ -1,0 +1,1477 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "text_aMFqMA": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Robot aspirapolvere e lavapavimenti </strong><br/>con <strong>20000Pa</strong> e <strong>navigazione IA</strong> avanzata. La sua stazione tutto-in-uno garantisce una pulizia autonoma e profonda, specificamente ottimizzata per <strong>gres, parquet e pavimenti duri</strong> tipici delle nostre case.</p>"
+          }
+        },
+        "judge_me_reviews_preview_badge_WHkrFJ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price_8CPnxk": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "liquid_wwX9ar": {
+          "type": "liquid",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div style=\"font-size: 32px; font-weight: bold; color: black; text-align: left; display: flex; align-items: center;\">  \n    <span> </span>  \n    <span id=\"product-price\">{{ product.price | money }}</span>  \n    {% if product.compare_at_price %}  \n        <span style=\"font-size: 24px; color: gray; text-decoration: line-through; margin-left: 10px;\">  \n            {{ product.compare_at_price | money }}  \n        </span>  \n    {% endif %}  \n</div>"
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "collapse_content": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_style": "block",
+            "swatch_selector_style": "swatch",
+            "variant_image_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "text_qjnmrW": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Précommande : expédition prévue le 25 octobre</p>"
+          }
+        },
+        "liquid_U74bFz": {
+          "type": "liquid",
+          "name": "Code",
+          "disabled": true,
+          "settings": {
+            "liquid": "<div style=\"width: 380px; border: 1px solid #c30000; border-radius: 6px; overflow: hidden; font-family: 'Arial Black', Arial, sans-serif; box-sizing: border-box;\">\n  <!-- 顶部红色区域 -->\n  <div style=\"background-color: #c30000; padding: 12px; color: white; font-weight: bold; font-size: 16px; text-align: center; font-family: 'Arial Black', Arial, sans-serif;\">\n    Offre Exclusive FRENCH DAYS – Seulement 215,99€\n  </div>\n  \n  <!-- 主体内容区域 -->\n  <div style=\"display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background-color: white; font-family: 'Arial Black', Arial, sans-serif;\">\n    <div>\n      <div style=\"font-size: 28px; font-weight: 900; color: #000; margin-bottom: 4px; font-family: 'Arial Black', Arial, sans-serif;\">-84€</div>\n      <div style=\"font-size: 14px; color: #444; display: flex; align-items: center; font-weight: normal; font-family: Arial, sans-serif;\">\n        <span>Code:&nbsp;</span>\n        <input id=\"couponCode\" type=\"text\" readonly value=\"T20PAUT\" style=\"font-size: 14px; border: none; background: none; width: 80px; font-weight: normal; cursor: pointer; color:#000; font-family: Arial, sans-serif;\" onclick=\"this.select();\">\n        <button onclick=\"copyCode()\" style=\"border: none; background-color: #c30000; color: white; font-weight: bold; margin-left: 6px; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-family: Arial, sans-serif;\">\n          COPY\n        </button>\n      </div>\n    </div>\n    <div>\n      <img src=\"https://img.icons8.com/ios-filled/48/ffd700/coins.png\" alt=\"coins\" style=\"width: 48px; height: 48px;\">\n    </div>\n  </div>\n</div>\n\n<script>\n  function copyCode() {\n    const input = document.getElementById('couponCode');\n    input.select();\n    input.setSelectionRange(0, 99999);\n    try {\n      document.execCommand('copy');\n      alert('Copied：' + input.value);\n    } catch {\n      alert('Failed');\n    }\n  }\n</script>"
+          }
+        },
+        "klip_coupons_klip_app_section_product_prBrdW": {
+          "type": "shopify://apps/klip-coupons/blocks/klip-app-section-product/df38e221-ede4-4ad4-b47d-56524361a5be",
+          "settings": {
+            "margin_top": 10,
+            "margin_bottom": 10
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "associated_products_Tr3AzC": {
+          "type": "associated_products",
+          "settings": {
+            "title": "Souvent achetés ensemble",
+            "stack_products": false,
+            "products_count": 10,
+            "background": "",
+            "text_color": ""
+          }
+        },
+        "boostly_product_page_enhancer_benifit_boxes_XqtRnp": {
+          "type": "shopify://apps/boostly/blocks/benifit_boxes/340aca85-c061-4ab2-945c-2ce6536f27cc",
+          "settings": {
+            "first_benefit": "Consegna gratuita",
+            "first_benefit_icon": "truck",
+            "second_benefit": "Garanzia di 2 anno",
+            "second_benefit_icon": "star",
+            "third_benefit": "Assistenza 24/7",
+            "third_benefit_icon": "chat",
+            "fourth_benefit": "30 Giorni Garanzia di Rimborso",
+            "fourth_benefit_icon": "shield-check",
+            "background_color": "#f0f0f0",
+            "icon_color": "#f83a3a",
+            "text_color": "#333333",
+            "bold_text": true,
+            "text_size": "large",
+            "icon_size": 32
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "badges",
+        "title",
+        "text_aMFqMA",
+        "judge_me_reviews_preview_badge_WHkrFJ",
+        "price_8CPnxk",
+        "liquid_wwX9ar",
+        "payment_terms",
+        "separator",
+        "description",
+        "variant_picker",
+        "text_qjnmrW",
+        "liquid_U74bFz",
+        "klip_coupons_klip_app_section_product_prBrdW",
+        "buy_buttons",
+        "associated_products_Tr3AzC",
+        "boostly_product_page_enhancer_benifit_boxes_XqtRnp"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "image_link_blocks_y4Jz8i": {
+      "type": "image-link-blocks",
+      "blocks": {
+        "item_gPWbP4": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_XLxLgw": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_ckJbe7": {
+          "type": "item",
+          "settings": {
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "item_PLFeJz": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Exclusive_Benefits_4.png",
+            "stretch_image": true,
+            "link_text": "",
+            "link_url": "",
+            "background": "",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "item_gPWbP4",
+        "item_XLxLgw",
+        "item_ckJbe7",
+        "item_PLFeJz"
+      ],
+      "disabled": true,
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "block_size": "small",
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "video_ipNjnk": {
+      "type": "video",
+      "blocks": {
+        "play_FyLyiR": {
+          "type": "play",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "play_FyLyiR"
+      ],
+      "disabled": true,
+      "name": "Video",
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "allow_transparent_header": false,
+        "autoplay": false,
+        "video_size": "auto",
+        "external_video_url": "https://www.youtube.com/watch?v=sjlcE-WvW94",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "slideshow_w7dCH7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_hE33Dw": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hE33Dw"
+      ],
+      "disabled": true,
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "slideshow_zehtUk": {
+      "type": "slideshow",
+      "blocks": {
+        "image_wJNd6D": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_wJNd6D"
+      ],
+      "disabled": true,
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "slideshow_fXEjk7": {
+      "type": "slideshow",
+      "blocks": {
+        "image_jyHnBW": {
+          "type": "image",
+          "settings": {
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h0",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_jyHnBW"
+      ],
+      "disabled": true,
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "allow_transparent_header": true,
+        "show_initial_transition": false,
+        "image_size": "auto",
+        "controls_type": "dots",
+        "transition_type": "fade_with_text",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "#f2f2f2",
+        "background_gradient": ""
+      }
+    },
+    "media_with_text_4jBphx": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_mQKmfD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-1_ca53ee26-9ccc-4e63-ad57-3a6e1f6b2c18.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Aspirazione estrema",
+            "content": "<p>Una potenza di aspirazione di 20 000 Pa per rimuovere polvere e peli di animali domestici, anche negli angoli e sui tappeti a pelo lungo.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_DQxC3X": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-2.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Autonomia intelligente",
+            "content": "<p>Fino a 180 minuti di autonomia con ripresa automatica dopo la ricarica, ideale per grandi superfici.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_NAWBRN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-3.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Pulizia professionale 3 in 1",
+            "content": "<p>Spazzamento, aspirazione e lavaggio combinati per una pulizia completa, adatta a ogni tipo di pavimento.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_BEVYTq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2-4.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Pulizia senza limiti",
+            "content": "<p>L'MX50 supera facilmente soglie e ostacoli alti fino a 20 mm, garantendo una pulizia continua e senza interruzioni in tutta la casa.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_NtEQED": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "media_width": 45,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "Respire à l’aise, même en période de mue!",
+            "title": "Filtration À 7 Étages",
+            "content": "<p>Notre filtre à sept couches assure une respiration optimale. Les lames anti-emmêlement préviennent les enchevêtrements, tandis que le séparateur et le filtre métallique arrêtent les grosses particules. Le cyclone sépare l'air et la poussière. L'éponge grossière retient les grosses poussières, et le filtre HEPA capte les particules jusqu'à 0,3 micron.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_Bz6LCJ": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "Conteneur spacieux, nettoyage prolongé, respiration sereine.",
+            "title": "1,5 L Capacité de Poussière",
+            "content": "<p>Notre bac à poussière de 1,5 L offre 50 % plus de capacité, contient plus de poussière, débris et poils d’animaux.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mQKmfD",
+        "image_DQxC3X",
+        "image_NAWBRN",
+        "image_BEVYTq",
+        "image_NtEQED",
+        "image_Bz6LCJ"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "media_with_text_7DmAeK": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_qhprjP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-1_a4cc9d8e-cf29-42fb-8e43-77c59e7ed17f.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Spazzola galleggiante anti-grovigli",
+            "content": "<p>Funzionamento ultra silenzioso a 55 dB, senza disturbare né gli animali né la famiglia.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_VGW8ah": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-2_bbc98b2c-93af-4e48-bc1d-2703411e2919.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Mappatura rapida e percorso intelligente",
+            "content": "<p>La spazzola principale flottante e quella laterale lavorano in sinergia per raccogliere e aspirare immediatamente peli e detriti, eliminando così la noiosa pulizia manuale.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_k36N6D": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-3_f322e0ee-d165-493e-b867-c3b840c3853c.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Svuotamento automatico",
+            "content": "<p>La stazione raccoglie automaticamente i rifiuti in un sacchetto da 3 litri, garantendo fino a 90 giorni senza necessità di manutenzione, per una vera libertà.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_7gwH6h": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-4_b21a91d3-abb9-40eb-9888-a98661ac8cca.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Design ultrapiatto",
+            "content": "<p>Con soli 96 mm di altezza, si infila sotto divani e letti per pulire le zone solitamente inaccessibili.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_qhprjP",
+        "image_VGW8ah",
+        "image_k36N6D",
+        "image_7gwH6h"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "media_with_text_YmCiWc": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_jhhBXN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4-5.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Manutenzione semplificata",
+            "content": "<p>La base della stazione si smonta facilmente e si lava con acqua, garantendo una perfetta igiene senza alcuno sforzo.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_Ep4ycE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5-1_6c4fb0c4-61c2-4707-8635-5a1643fb0579.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Modalità esperta per tappeti",
+            "content": "<p>Grazie alla tecnologia a ultrasuoni, il robot rileva con precisione i tappeti, solleva automaticamente il panno e attiva la modalità di potenza potenziata per una pulizia profonda, proteggendo al contempo i tessuti.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_kg6VAB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5-2_880f9466-374c-47d8-8d51-a36df533b4a6.jpg",
+            "media_width": 40,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Navigazione con IA",
+            "content": "<p>Rileva, analizza ed evita gli ostacoli in tempo reale con precisione millimetrica, garantendo una pulizia sicura ed efficace.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        },
+        "image_aA4Hcz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5-3_8af76841-d22b-4274-8a13-b9ed9c07613c.jpg",
+            "media_width": 40,
+            "media_position": "end",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "",
+            "title": "Cartografia e percorsi intelligenti",
+            "content": "<p>Dotato di un LiDAR DTOF, esegue una scansione a 360° della tua casa e crea una mappa con precisione millimetrica in soli 10 minuti. Il sistema Matrix Clean pianifica percorsi multidirezionali per una pulizia senza punti ciechi, ideale per moquette e pavimenti duri.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#f0f0f0",
+            "background_gradient": "",
+            "text_color": "#1a1a1a",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_jhhBXN",
+        "image_Ep4ycE",
+        "image_kg6VAB",
+        "image_aA4Hcz"
+      ],
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
+    "rich_text_TGcenG": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_GeJzGc": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_XUNrEa": {
+          "type": "heading",
+          "settings": {
+            "text": "Tecnologie chiave",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_E6BHB7": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_GeJzGc",
+        "heading_XUNrEa",
+        "richtext_E6BHB7"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "content_width": "small",
+        "text_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "image_with_text_banner_Xwz7Mr": {
+      "type": "image-with-text-banner",
+      "blocks": {
+        "heading_d88YkU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text collection",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_GUWUCn": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_d88YkU",
+        "richtext_GUWUCn"
+      ],
+      "name": "Image with text banner",
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/3-1_65.jpg",
+        "mobile_image": "shopify://shop_images/3-1_2b05eb04-bd59-4094-87be-4de8ec9de685.jpg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "image_with_text_banner_hecepz": {
+      "type": "image-with-text-banner",
+      "blocks": {
+        "heading_PGAznq": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text collection",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_QBM8xM": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PGAznq",
+        "richtext_QBM8xM"
+      ],
+      "name": "Image with text banner",
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/3-2_c350aa4b-6f8c-4701-8e8c-a81770a56d72.jpg",
+        "mobile_image": "shopify://shop_images/3-2_51a9c589-6c19-45f8-b6d8-db38bd282043.jpg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "image_with_text_banner_HPanRE": {
+      "type": "image-with-text-banner",
+      "blocks": {
+        "heading_xwN7t7": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text collection",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_XL7PDA": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xwN7t7",
+        "richtext_XL7PDA"
+      ],
+      "name": "Image with text banner",
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "shopify://shop_images/3-3_9924090e-34dc-4a7e-b6d3-435734d0510d.jpg",
+        "mobile_image": "shopify://shop_images/3-3_668462ea-1e86-4546-8c56-1134016d48fc.jpg",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "multi_column_ft79mU": {
+      "type": "multi-column",
+      "blocks": {
+        "item_V4xNrw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/6-1_9b6bef38-9d37-4d4a-ad76-e6b15c61ab78.jpg",
+            "show_controls": false,
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_YByjKK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/6-2_e521dbea-5876-4f4a-bf25-5e0dcc7894fe.jpg",
+            "show_controls": false,
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_hBFUYp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/6-3_9d0df691-83be-421d-b290-7d683ac1dce7.jpg",
+            "show_controls": false,
+            "column_size": "3",
+            "title": "",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_V4xNrw",
+        "item_YByjKK",
+        "item_hBFUYp"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "Presentazione dell'applicazione",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "specification_table_7HCcjm": {
+      "type": "specification-table",
+      "blocks": {
+        "row_HD8ykf": {
+          "type": "row",
+          "settings": {
+            "heading": "Marchio",
+            "value": "<p>Ultenic</p>"
+          }
+        },
+        "row_TrenYr": {
+          "type": "row",
+          "settings": {
+            "heading": "Modello",
+            "value": "<p>Ultenic MX50 Robot Aspirapolvere Lavapavimenti</p>"
+          }
+        },
+        "row_QwKE8C": {
+          "type": "row",
+          "settings": {
+            "heading": "Colore",
+            "value": "<p>Noir</p>"
+          }
+        },
+        "row_fiTDkR": {
+          "type": "row",
+          "settings": {
+            "heading": "Dimensioni prodotto",
+            "value": "<p>32 x 32 x 9,7 cm</p>"
+          }
+        },
+        "row_XrTGaa": {
+          "type": "row",
+          "settings": {
+            "heading": "Peso dell'articolo",
+            "value": "<p>5,7 kilogrammes</p>"
+          }
+        },
+        "row_m9akwx": {
+          "type": "row",
+          "settings": {
+            "heading": "Durata della batteria",
+            "value": "<p>180 min</p>"
+          }
+        },
+        "row_kRWtai": {
+          "type": "row",
+          "settings": {
+            "heading": "Tensione",
+            "value": "<p>‎14,4 Volts</p>"
+          }
+        }
+      },
+      "block_order": [
+        "row_HD8ykf",
+        "row_TrenYr",
+        "row_QwKE8C",
+        "row_fiTDkR",
+        "row_XrTGaa",
+        "row_m9akwx",
+        "row_kRWtai"
+      ],
+      "settings": {
+        "navigation_name": "",
+        "full_width": false,
+        "subheading": "",
+        "title": "Descrizione tecnica",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "max_rows": 100,
+        "view_all_text": "View all",
+        "view_less_text": "View less",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "chart_background": "",
+        "chart_text_color": "",
+        "chart_true_false_color": ""
+      }
+    },
+    "multi_column_NRtdMD": {
+      "type": "multi-column",
+      "blocks": {
+        "item_RtRtPa": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "3",
+            "title": "Asistencia profesional",
+            "heading_tag": "h4",
+            "content": "<p>Assistenza professionale</p><p><strong>Manuale multilingue</strong></p><p>Istruzioni dettagliate del prodotto</p><p><strong>SERVIZIO DI QUALITÀ</strong></p><p>Ultenic vous offre une garantie produit de 2 ans et un service après-vente local en Italy sans aucun souci * Le magasin phare assure l'achat de pièces détachées, n'hésitez pas à nous contacter si besoin. SAV local (service-it@ultenic.com)</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_dy44AY": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "3",
+            "title": "Caratteristica speciale",
+            "heading_tag": "h4",
+            "content": "<p>1x Robot aspirapolvere MX50<br/>1x Stazione di ricarica e autopulizia<br/>1x Tappetino protettivo impermeabile<br/>2x Supporti per panni di lavaggio<br/>4x Panni di lavaggio<br/>2x Spazzole laterali<br/>2x Filtri HEPA<br/>2x Sacchetti per la polvere (3 l)<br/>1x Soluzione detergente specifica<br/>1x Kit di manutenzione<br/>1x Manuali d'uso <br/>1x Guida rapida all'installazione</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_pBJbez": {
+          "type": "item",
+          "settings": {
+            "show_controls": false,
+            "column_size": "4",
+            "title": "Manuale d'uso",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "https://cdn.shopify.com/s/files/1/0526/2996/2938/files/IT_MX50.pdf?v=1776757699",
+            "link_text": "Scaricamento",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_RtRtPa",
+        "item_dy44AY",
+        "item_pBJbez"
+      ],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "Parametro",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "comparison_table_6Wzza7": {
+      "type": "comparison-table",
+      "blocks": {
+        "headings_w8YgrT": {
+          "type": "headings",
+          "settings": {
+            "heading_1": "Potenza di aspirazione",
+            "heading_2": "Tipo di navigazione",
+            "heading_3": "Altezza",
+            "heading_4": "Dimensioni",
+            "heading_5": "Capacità della batteria",
+            "heading_6": "Capacità del serbatoio dell'acqua",
+            "heading_7": "Capacità del bidone della spazzatura",
+            "heading_8": "Autopulizia",
+            "heading_9": "Sacco per la polvere",
+            "heading_10": "Modalità di spazzolatura e lavaggio",
+            "heading_11": "Livello di rumore",
+            "heading_12": "Rinforzo del tappeto",
+            "heading_13": "Tempo di funzionamento",
+            "heading_14": "Superficie da pulire",
+            "heading_15": "Tempo di ricarica",
+            "heading_16": "Metodo di controllo",
+            "heading_17": "",
+            "heading_18": "",
+            "heading_19": "",
+            "heading_20": ""
+          }
+        },
+        "values_fNjrAW": {
+          "type": "values",
+          "disabled": true,
+          "settings": {
+            "product": "ultenic-mx50-robot-aspirador-y-fregasuelos",
+            "value_1": "<p>20000 Pa</p>",
+            "value_2": "<p>LiDAR DTOF</p>",
+            "value_3": "<p>97 mm</p>",
+            "value_4": "<p>330 mm × 330 mm × 97 mm<br/><br/>Dimensioni della stazione base: 327 mm × 230 mm × 436 mm</p>",
+            "value_5": "<p>5200 mAh</p>",
+            "value_6": "<p>Capacità dell'apparecchio: 55 ml<br/>Capacità della stazione di ricarica: 4 L</p>",
+            "value_7": "<p>Capacità dell'apparecchio: 300 ml<br/>Capacità della stazione di ricarica: 4 L</p>",
+            "value_8": "<p>✔️</p>",
+            "value_9": "<p>✔️</p>",
+            "value_10": "<p>Aspirateur et lavage 2 en 1</p>",
+            "value_11": "<p>55 dB</p>",
+            "value_12": "<p>✔️</p>",
+            "value_13": "<p>180 min</p>",
+            "value_14": "<p>200 m²</p>",
+            "value_15": "<p>4-5 h</p>",
+            "value_16": "<p>App, Alexa, Google Assistant, Telecomando</p>",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "view_button_background": "",
+            "view_button_text_color": ""
+          }
+        },
+        "values_kLiwmn": {
+          "type": "values",
+          "settings": {
+            "product": "ultenic-t20-pro",
+            "value_1": "<p>8000 Pa</p>",
+            "value_2": "<p>LDS LiDAR</p>",
+            "value_3": "<p>97 mm</p>",
+            "value_4": "<p>Robot aspirapolvere: 320 × 320 × 97 mm. Dimensioni della stazione di ricarica: 215 × 180 × 269 mm.</p>",
+            "value_5": "<p>4 * 3200 mAh</p>",
+            "value_6": "<p>250 ml</p>",
+            "value_7": "<p>340 ml</p>",
+            "value_8": "<p>✔️</p>",
+            "value_9": "<p>3,5 L</p>",
+            "value_10": "<p>Aspirapolvere e lavapavimenti 2 in 1</p>",
+            "value_11": "<p>60 dB</p>",
+            "value_12": "<p>✔️</p>",
+            "value_13": "<p>180 min</p>",
+            "value_14": "<p>200 m²</p>",
+            "value_15": "<p>5-6 h</p>",
+            "value_16": "<p>App, Alexa, Google Assistant</p>",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "view_button_background": "",
+            "view_button_text_color": ""
+          }
+        },
+        "values_MU7rBM": {
+          "type": "values",
+          "settings": {
+            "product": "ultenic-d10-robot-aspirapolvere-lavapavimenti",
+            "value_1": "<p>5000 Pa</p>",
+            "value_2": "<p>LiDAR di navigazione</p>",
+            "value_3": "<p>97mm</p>",
+            "value_4": "<p>320 * 320 * 97 mm</p>",
+            "value_5": "<p>4*2600mAh</p>",
+            "value_6": "<p>250ml</p>",
+            "value_7": "<p>350ml</p>",
+            "value_8": "<p>/</p>",
+            "value_9": "<p>/</p>",
+            "value_10": "<p>Aspirapolvere e lavapavimenti 2 in 1</p>",
+            "value_11": "<p>63dB</p>",
+            "value_12": "<p>✔️</p>",
+            "value_13": "<p>120min</p>",
+            "value_14": "<p>200m²</p>",
+            "value_15": "<p>3-4h</p>",
+            "value_16": "<p>App, Alexa, Google Assistant</p>",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "view_button_background": "",
+            "view_button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "headings_w8YgrT",
+        "values_fNjrAW",
+        "values_kLiwmn",
+        "values_MU7rBM"
+      ],
+      "name": "Comparison table",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "Confronto",
+        "title": "Confronto tra prodotti",
+        "content": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "max_rows": 5,
+        "view_all_text": "View all",
+        "view_less_text": "View less",
+        "view_product": "View",
+        "show_product_info": true,
+        "show_product_image": true,
+        "show_product_swatch": true,
+        "viewing_product": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "chart_background": "",
+        "chart_text_color": "",
+        "chart_true_false_color": ""
+      }
+    },
+    "featured_collection_aNFY8q": {
+      "type": "featured-collection",
+      "settings": {
+        "navigation_name": "",
+        "collection": "t20-pro-accessori",
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": false,
+        "products_count": 50,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Prodotti spesso acquistati insieme",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "faq_XVCfzE": {
+      "type": "faq",
+      "blocks": {
+        "item_hw8J4P": {
+          "type": "item",
+          "settings": {
+            "title": "L'Ultenic MX50 è compatibile con il comando vocale e la programmazione remota?",
+            "content": "<p>Sì. Tramite l'app «Smart Life» puoi programmare la pulizia, definire le zone off-limits o consultare la cronologia. È inoltre compatibile con Alexa e Google Assistant per il controllo vocale.</p>"
+          }
+        },
+        "item_UeeN3i": {
+          "type": "item",
+          "settings": {
+            "title": "I peli degli animali e i capelli lunghi si impigliano nel rullo?",
+            "content": "<p>La spazzola principale, realizzata interamente in silicone, e il sistema anti-groviglio riducono notevolmente la formazione di grovigli. Per una manutenzione ottimale, pulisci regolarmente le estremità del rullo.</p>"
+          }
+        },
+        "item_CwKedL": {
+          "type": "item",
+          "settings": {
+            "title": "Con quale frequenza bisogna sostituire il sacchetto raccoglipolvere?",
+            "content": "<p>Il sacchetto da 3 litri garantisce un'autonomia compresa tra 60 e 90 giorni (a seconda dell'utilizzo). L'app ti avvisa quando il sacchetto è pieno; la sostituzione avviene senza contatto.</p>"
+          }
+        },
+        "item_zR8agJ": {
+          "type": "item",
+          "settings": {
+            "title": "Bisogna pulire la base della stazione?",
+            "content": "<p>Sì, rimuovi il vassoio estraibile e sciacqualo con acqua ogni 1 o 2 mesi per garantire l'igiene.</p>"
+          }
+        },
+        "item_bwiaUM": {
+          "type": "item",
+          "settings": {
+            "title": "Posso annullare il mio ordine?",
+            "content": "<p>Sì: contattaci al più presto indicando il numero dell'ordine.· Se l'ordine non è ancora stato spedito: cancellazione gratuita.· Se l'ordine è già stato spedito: rifiuta la consegna o segui la nostra procedura di reso dopo la ricezione (potrebbero essere applicati costi di restituzione se non si tratta di un difetto).</p>"
+          }
+        },
+        "item_hpANLQ": {
+          "type": "item",
+          "settings": {
+            "title": "Verranno addebitati in seguito costi o tasse nascoste?",
+            "content": "<p>Assolutamente no! Il prezzo finale include tutte le tasse: non ci saranno spiacevoli sorprese al momento del pagamento.</p>"
+          }
+        },
+        "item_HKmwkM": {
+          "type": "item",
+          "settings": {
+            "title": "Quanto tempo ci vorrà per ricevere il mio ordine?",
+            "content": "<p>Dipende dalla tua località. Per gli ordini gestiti a livello locale: da 5 a 7 giorni lavorativi. Per le spedizioni internazionali: da 7 a 16 giorni. I dettagli della spedizione saranno indicati nell'e-mail di conferma.</p>"
+          }
+        },
+        "item_NpXUD4": {
+          "type": "item",
+          "settings": {
+            "title": "Qual è la durata della garanzia?",
+            "content": "<p>Tutti i prodotti sono coperti da una politica di restituzione di 30 giorni (purché non siano danneggiati) e da una garanzia limitata di due anni (accessori esclusi). Per ulteriori informazioni, consultare la sezione «Resi e garanzia».</p>"
+          }
+        },
+        "item_pfTrHk": {
+          "type": "item",
+          "settings": {
+            "title": "Hai qualche domanda?",
+            "content": "<p>Puoi contattarci tramite la nostra pagina dei contatti! Saremo lieti di aiutarti.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_hw8J4P",
+        "item_UeeN3i",
+        "item_CwKedL",
+        "item_zR8agJ",
+        "item_bwiaUM",
+        "item_hpANLQ",
+        "item_HKmwkM",
+        "item_NpXUD4",
+        "item_pfTrHk"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "navigation_name": "",
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQs",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
+    "17436486658a4f2688": {
+      "type": "apps",
+      "blocks": {
+        "ryviu_reviews_qa_ryviu_product_reviews_YgnfQK": {
+          "type": "shopify://apps/ryviu-product-reviews/blocks/ryviu-product-reviews/807ad6ed-1a6a-4559-abea-ed062858d9da",
+          "disabled": true,
+          "settings": {
+            "product": "ultenic-u20-aspirateur-balai-sans-fil",
+            "r_wapper": "",
+            "r_max_width": 1920,
+            "r_padding_block": 0,
+            "one_col_on_mobile": false,
+            "hide_write_review_from": false,
+            "hide_title_image_form": false
+          }
+        },
+        "judge_me_reviews_review_widget_jRjzEY": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "ryviu_reviews_qa_ryviu_product_reviews_YgnfQK",
+        "judge_me_reviews_review_widget_jRjzEY"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_link_blocks_y4Jz8i",
+    "video_ipNjnk",
+    "slideshow_w7dCH7",
+    "slideshow_zehtUk",
+    "slideshow_fXEjk7",
+    "media_with_text_4jBphx",
+    "media_with_text_7DmAeK",
+    "media_with_text_YmCiWc",
+    "rich_text_TGcenG",
+    "image_with_text_banner_Xwz7Mr",
+    "image_with_text_banner_hecepz",
+    "image_with_text_banner_HPanRE",
+    "multi_column_ft79mU",
+    "specification_table_7HCcjm",
+    "multi_column_NRtdMD",
+    "comparison_table_6Wzza7",
+    "featured_collection_aNFY8q",
+    "faq_XVCfzE",
+    "17436486658a4f2688"
+  ]
+}

@@ -14,10 +14,9 @@
       "blocks": {
         "image_dE3MHk": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/homepage_Banner_PC_c267c5ec-c467-461b-acea-75827a1a0c1c.jpg",
-            "mobile_image": "shopify://shop_images/homepage_Banner_M_a066b548-e9c7-46c3-bacd-8ada1bbf7dc2.jpg",
+            "image": "shopify://shop_images/homepage_Banner_PC-U20.png",
+            "mobile_image": "shopify://shop_images/homepage_Banner_M-U20.png",
             "content_max_width": 840,
             "mobile_text_position": "place-self-start text-start",
             "desktop_text_position": "sm:place-self-center-start sm:text-start",
@@ -25,7 +24,29 @@
             "title": "",
             "heading_tag": "h2",
             "button_text": "",
-            "button_link": "shopify://pages/grande-saldi-di-primavera-2026",
+            "button_link": "shopify://pages/saldi-per-la-festa-della-mamma",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_VEXNeR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/homepage_Banner_PC-P10.png",
+            "mobile_image": "shopify://shop_images/homepage_Banner_M-P10.png",
+            "content_max_width": 840,
+            "mobile_text_position": "place-self-start text-start",
+            "desktop_text_position": "sm:place-self-center-start sm:text-start",
+            "subheading": "",
+            "title": "",
+            "heading_tag": "h2",
+            "button_text": "",
+            "button_link": "shopify://pages/saldi-per-la-festa-della-mamma",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
@@ -37,7 +58,8 @@
         }
       },
       "block_order": [
-        "image_dE3MHk"
+        "image_dE3MHk",
+        "image_VEXNeR"
       ],
       "settings": {
         "navigation_name": "",

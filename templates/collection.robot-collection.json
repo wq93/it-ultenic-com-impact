@@ -139,12 +139,43 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
+    },
+    "featured_collection_w6Q73y": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "navigation_name": "",
+        "collection": "",
+        "products": [
+          "ultenic-ac1-triflex-lavapavimenti-senza-filo",
+          "ultenic-pooleco-robot-pulisci-piscina-senza-fili"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Aggiorna la tua Routine di Pulizia",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow_xzThcR",
     "banner",
     "main",
-    "faq_pFtirQ"
+    "faq_pFtirQ",
+    "featured_collection_w6Q73y"
   ]
 }

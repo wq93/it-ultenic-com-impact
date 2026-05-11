@@ -86,11 +86,42 @@
         "show_filter_values_count": true,
         "open_first_filter_group": false
       }
+    },
+    "featured_collection_EEwPx8": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "navigation_name": "",
+        "collection": "",
+        "products": [
+          "ultenic-ac1-triflex-lavapavimenti-senza-filo",
+          "ultenic-mx50-robot-aspirapolvere-lavapavimenti"
+        ],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "Scopri le Nostre Ultime Novità",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
     "slideshow_xzThcR",
     "banner",
-    "main"
+    "main",
+    "featured_collection_EEwPx8"
   ]
 }

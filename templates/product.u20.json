@@ -22,6 +22,12 @@
             "heading_tag": "h2"
           }
         },
+        "text_akrQer": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ultenic U20: <strong>Aspirapolvere senza fili</strong> potente con aspirazione da 55kPa e autonomia fino a 60 minuti. Il suo design leggero e <strong>silenzioso </strong>è ideale per la cura del <strong>parquet</strong> e dei pavimenti delicati, garantendo una pulizia profonda in tutte le case italiane.</p>"
+          }
+        },
         "badges": {
           "type": "badges",
           "settings": {}
@@ -121,7 +127,7 @@
           }
         },
         "boostly_product_page_enhancer_benifit_boxes_AQAHaA": {
-          "type": "shopify://apps/boostly-product-page-enhancer/blocks/benifit_boxes/340aca85-c061-4ab2-945c-2ce6536f27cc",
+          "type": "shopify://apps/boostly/blocks/benifit_boxes/340aca85-c061-4ab2-945c-2ce6536f27cc",
           "settings": {
             "first_benefit": "Consegna gratuita",
             "first_benefit_icon": "truck",
@@ -143,6 +149,7 @@
       "block_order": [
         "vendor",
         "title",
+        "text_akrQer",
         "badges",
         "judge_me_reviews_preview_badge_DbyMng",
         "price",

@@ -1,8 +1,9 @@
 {%- comment -%}
   This snippet structures the micro-data using JSON-LD specification.
 {%- endcomment -%}
-
 {%- if request.page_type == 'product' -%}
+{%- comment -%}
+
     {%- assign ryviu = product.metafields.ryviu -%}
     <script type="application/ld+json">
         {
@@ -84,6 +85,7 @@
         ]
       }
     </script>
+   {%- endcomment -%} 
 {%- elsif request.page_type == 'article' -%}
     <script type="application/ld+json">
         {
